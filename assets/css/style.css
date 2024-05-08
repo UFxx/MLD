@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  background-color: #171717;
+}
+
+.all-heroes-container {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+.hero {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.hero p {
+  position: absolute;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 5px);
+}
+
+.hero__active {
+  border: 2px solid white;
+}
+
+.team-blue {
+  position: absolute;
+  left: -60px;
+  top: 0;
+}
+
+.team-red {
+  position: absolute;
+  right: -60px;
+  top: 0;
+  transform: rotateY(180deg);
+}
+
+.pick {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pick-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: gray;
+}
+
+.ban {
+  position: absolute;
+  top: -50px;
+  left: 60px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.ban-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: gray;
+}
