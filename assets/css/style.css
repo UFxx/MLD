@@ -14,17 +14,35 @@ body {
   background-color: #171717;
 }
 
-.all-heroes-container {
+.container {
   position: relative;
   width: 600px;
   height: 500px;
-  background-color: black;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
   padding: 20px;
+  background-color: black;
+}
+
+.heroes-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 50px);
+  height: calc(500px - 40px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  gap: 30px;
+  border-radius: 10px;
+}
+
+.heroes-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.heroes-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.heroes-container::-webkit-scrollbar-thumb {
+  background-color: gray;
 }
 
 .hero {
@@ -33,6 +51,12 @@ body {
   height: 50px;
   border-radius: 100%;
   cursor: pointer;
+
+  transition: 0.3s ease transform;
+}
+
+.hero:hover {
+  transform: translateY(4px);
 }
 
 .hero img {
@@ -48,6 +72,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   top: calc(100% + 5px);
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .hero__active {
@@ -78,6 +104,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  cursor: pointer;
   background-color: gray;
 }
 
@@ -94,5 +121,59 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 100%;
+  cursor: pointer;
   background-color: gray;
+}
+
+.pick-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.ban-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.add-note {
+  position: absolute;
+  top: 10%;
+  left: 27%;
+  padding: 20px;
+  background-color: #aaaaaa10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  opacity: 50%;
+  cursor: pointer;
+  transition: 0.3s ease opacity;
+}
+
+.add-note:hover {
+  opacity: 100%;
+}
+
+.add-note-stick {
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.add-note-stick:nth-child(1) {
+  transform: rotate(90deg);
+}
+
+.note {
+  position: absolute;
+  left: 150px;
+  top: 10%;
+  color: white;
+  font-size: 16px;
+  background-color: black;
+  border-radius: 5px;
 }
