@@ -16,21 +16,21 @@ body {
 
 .container {
   position: relative;
-  width: 600px;
-  height: 500px;
+  width: 700px;
+  height: 600px;
   padding: 20px;
   background-color: black;
+  border-radius: 5px;
 }
 
 .heroes-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(7, 50px);
-  height: calc(500px - 40px);
+  height: calc(600px - 40px);
   overflow-y: scroll;
   overflow-x: hidden;
   gap: 30px;
-  border-radius: 10px;
 }
 
 .heroes-container::-webkit-scrollbar {
@@ -47,8 +47,8 @@ body {
 
 .hero {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   cursor: pointer;
 
@@ -82,13 +82,13 @@ body {
 
 .team-blue {
   position: absolute;
-  left: -60px;
+  left: -70px;
   top: 0;
 }
 
 .team-red {
   position: absolute;
-  right: -60px;
+  right: -70px;
   top: 0;
   transform: rotateY(180deg);
 }
@@ -101,8 +101,8 @@ body {
 }
 
 .pick-item {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   cursor: pointer;
   background-color: gray;
@@ -126,8 +126,8 @@ body {
 }
 
 .pick-item img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
 }
 
@@ -137,10 +137,11 @@ body {
   border-radius: 100%;
 }
 
-.add-note {
+.add-note,
+.add-note__opened {
   position: absolute;
-  top: 10%;
-  left: 27%;
+  top: 3%;
+  left: 23.5%;
   padding: 20px;
   background-color: #aaaaaa10;
   display: flex;
@@ -150,6 +151,14 @@ body {
   opacity: 50%;
   cursor: pointer;
   transition: 0.3s ease opacity;
+}
+
+.add-note__opened .add-note-stick:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.add-note__opened .add-note-stick:nth-child(2) {
+  transform: rotate(-45deg);
 }
 
 .add-note:hover {
@@ -162,6 +171,8 @@ body {
   height: 5px;
   border-radius: 10px;
   background-color: white;
+
+  transition: 0.3s ease transform;
 }
 
 .add-note-stick:nth-child(1) {
@@ -170,10 +181,23 @@ body {
 
 .note {
   position: absolute;
-  left: 150px;
+  display: block;
+  left: 50px;
   top: 10%;
   color: white;
   font-size: 16px;
   background-color: black;
   border-radius: 5px;
+  resize: none;
+  height: 400px;
+  width: 300px;
+  transform: translateY(5px);
+
+  transition: 0.3s ease opacity, 0.5s ease transform;
+}
+
+.note__hidden {
+  opacity: 0;
+  transform: translateY(0);
+  z-index: -1;
 }

@@ -12,7 +12,7 @@ const Heroes = [
   {
     name: "Saber",
     role: "Assassin",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/luoyi.png",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/saber.png",
   },
   {
     name: "Alice",
@@ -42,7 +42,7 @@ const Heroes = [
   {
     name: "Akai",
     role: "Tank",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/nana.png",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/akai.png",
   },
   {
     name: "Franco",
@@ -52,7 +52,7 @@ const Heroes = [
   {
     name: "Bane",
     role: "Fighter",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/nana.png",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/bane.png",
   },
   {
     name: "Bruno",
@@ -107,7 +107,7 @@ const Heroes = [
   {
     name: "Freya",
     role: "Fighter",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/eudora.png",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/freya.png",
   },
   {
     name: "Gord",
@@ -183,11 +183,6 @@ const Heroes = [
     name: "Lapu-Lapu",
     role: "Fighter",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/lapulapu.png",
-  },
-  {
-    name: "Vexana",
-    role: "Mage",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/vexana.png",
   },
   {
     name: "Vexana",
@@ -280,9 +275,9 @@ const Heroes = [
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/angela.png",
   },
   {
-    name: "Guison",
+    name: "Gusion",
     role: "Assassin",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/guison.png",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/gusion.png",
   },
   {
     name: "Valir",
@@ -440,39 +435,19 @@ const Heroes = [
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/baxia.png",
   },
   {
+    name: "Masha",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/masha.png",
+  },
+  {
     name: "Wanwan",
     role: "Marksman",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/wanwan.png",
   },
   {
-    name: "Popol and Kupa",
-    role: "Marksman",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/popolandkupa.png",
-  },
-  {
-    name: "Brody",
-    role: "Marksman",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/brody.png",
-  },
-  {
-    name: "Beatrix",
-    role: "Marksman",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/beatrix.png",
-  },
-  {
-    name: "Natan",
-    role: "Marksman",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/natan.png",
-  },
-  {
-    name: "Melissa",
-    role: "Marksman",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/melissa.png",
-  },
-  {
-    name: "Ixia",
-    role: "Marksman",
-    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/ixia.png",
+    name: "Silvanna",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/silvanna.png",
   },
   {
     name: "Cecilion",
@@ -480,9 +455,49 @@ const Heroes = [
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/cecilion.png",
   },
   {
+    name: "Carmilla",
+    role: "Support",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/carmilla.png",
+  },
+  {
+    name: "Atlas",
+    role: "Tank",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/atlas.png",
+  },
+  {
+    name: "Popol and Kupa",
+    role: "Marksman",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/popolandkupa.png",
+  },
+  {
+    name: "Чонг",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/yuzhong.png",
+  },
+  {
     name: "Luo Yi",
     role: "Mage",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/luoyi.png",
+  },
+  {
+    name: "Benedetta",
+    role: "Assassin",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/benedetta.png",
+  },
+  {
+    name: "Khaleed",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/khaleed.png",
+  },
+  {
+    name: "Barats",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/barats.png",
+  },
+  {
+    name: "Brody",
+    role: "Marksman",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/brody.png",
   },
   {
     name: "Yve",
@@ -490,9 +505,69 @@ const Heroes = [
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/yve.png",
   },
   {
+    name: "Mathilda",
+    role: "Support",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/mathilda.png",
+  },
+  {
+    name: "Paquito",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/paquito.png",
+  },
+  {
+    name: "Gloo",
+    role: "Tank",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/gloo.png",
+  },
+  {
+    name: "Beatrix",
+    role: "Marksman",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/beatrix.png",
+  },
+  {
+    name: "Phoveus",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/phoveus.png",
+  },
+  {
+    name: "Natan",
+    role: "Marksman",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/natan.png",
+  },
+  {
+    name: "Aulus",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/aulus.png",
+  },
+  {
+    name: "Aamon",
+    role: "Assassin",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/aamon.png",
+  },
+  {
     name: "Valentina",
     role: "Mage",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/valentina.png",
+  },
+  {
+    name: "Edith",
+    role: "Tank",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/edith.png",
+  },
+  {
+    name: "Floryn",
+    role: "Support",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/floryn.png",
+  },
+  {
+    name: "Yin",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/yin.png",
+  },
+  {
+    name: "Melissa",
+    role: "Marksman",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/melissa.png",
   },
   {
     name: "Xavier",
@@ -500,9 +575,49 @@ const Heroes = [
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/xavier.png",
   },
   {
+    name: "Julian",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/julian.png",
+  },
+  {
+    name: "Fredrinn",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/fredrinn.png",
+  },
+  {
+    name: "Joy",
+    role: "Assassin",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/joy.png",
+  },
+  {
+    name: "Arlott",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/arlott.png",
+  },
+  {
     name: "Novaria",
     role: "Mage",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/novaria.png",
+  },
+  {
+    name: "Ixia",
+    role: "Marksman",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/ixia.png",
+  },
+  {
+    name: "Nolan",
+    role: "Assassin",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/nolan.png",
+  },
+  {
+    name: "Cici",
+    role: "Fighter",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/cici.png",
+  },
+  {
+    name: "Chip",
+    role: "Tank",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/chip.png",
   },
 ];
 

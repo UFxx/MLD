@@ -1,6 +1,7 @@
 const addNote = document.querySelector(".add-note");
+const note = document.querySelector(".note");
+
 addNote.addEventListener("click", () => {
-  const textarea = document.createElement("textarea");
-  textarea.classList.add("note");
-  document.body.appendChild(textarea);
+  note.classList.toggle("note__hidden");
+  addNote.classList.toggle("add-note__opened");
 });
