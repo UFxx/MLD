@@ -625,6 +625,7 @@ const heroesContainer = document.querySelector(".heroes-container");
 Heroes.map((hero) => {
   const newHero = document.createElement("div");
   newHero.classList.add("hero");
+  newHero.setAttribute('role', hero.role);
 
   newHero.addEventListener("click", () => {
     const activeHeroes = document.querySelectorAll(".hero__active");

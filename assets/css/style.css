@@ -23,6 +23,37 @@ body {
   border-radius: 5px;
 }
 
+.roles {
+  padding-bottom: 15px;
+}
+
+.roles ul {
+  display: flex;
+  column-gap: 15px;
+}
+
+.roles ul li {
+  list-style: none;
+}
+
+.role__active {
+  color: white !important;
+}
+
+.roles ul li button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+
+  transition: 0.3s ease color;
+}
+
+.roles ul li button:hover {
+  color: white;
+}
+
 .heroes-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
