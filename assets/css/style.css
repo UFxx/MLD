@@ -24,6 +24,8 @@ body {
   border-radius: 5px;
 }
 
+/* Roles */
+
 .roles {
   padding-bottom: 15px;
 }
@@ -54,6 +56,8 @@ body {
 .roles ul li button:hover {
   color: white;
 }
+
+/* Heroes */
 
 .heroes-container {
   display: grid;
@@ -127,6 +131,8 @@ body {
   transform: rotateY(180deg);
 }
 
+/* Picks */
+
 .pick {
   display: flex;
   flex-direction: column;
@@ -141,6 +147,8 @@ body {
   cursor: pointer;
   background-color: gray;
 }
+
+/* Bans */
 
 .ban {
   position: absolute;
@@ -170,6 +178,8 @@ body {
   height: 40px;
   border-radius: 100%;
 }
+
+/* Notes */
 
 .add-note,
 .change-note-visibility {
@@ -247,4 +257,32 @@ body {
   padding: 5px;
   border: none;
   resize: none;
+}
+
+/* Note menu */
+
+.note-menu {
+  position: absolute;
+  overflow: hidden;
+  height: 0;
+  left: 0;
+  top: 0;
+  background-color: #171717;
+  width: 150px;
+
+  transition: .3s ease height;
+}
+
+.note-menu p {
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+  transition: 0.3s ease background-color;
+}
+
+.note-menu p:hover {
+  background-color: black;
 }
