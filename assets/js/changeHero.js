@@ -1,7 +1,7 @@
 const banItems = document.querySelectorAll(".ban-item");
 const pickItems = document.querySelectorAll(".pick-item");
 
-function a(items) {
+function changeHero(items) {
   items.forEach((item) => {
     item.addEventListener("click", () => {
       const activeHero = document.querySelector(".hero__active");
@@ -23,5 +23,5 @@ function a(items) {
     });
   });
 }
-a(banItems);
-a(pickItems);
+changeHero(banItems);
+changeHero(pickItems);
