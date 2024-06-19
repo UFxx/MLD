@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/8a2fbc0c4d.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>MLD</title>
   </head>
   <body>
@@ -92,14 +101,18 @@
         </div>
       </div>
     </div>
-    <div class="add-note">
-      <div class="add-note-stick"></div>
-      <div class="add-note-stick"></div>
+    <div class="add-note"><i class="fas fa-plus"></i></div>
+    <div class="change-note-visibility"><i class="fas fa-eye"></i></div>
+    <div class="notes"></div>
+    <div class="note-menu">
+      <p class="delete-note">Удалить заметку</p>
+      <p class="cancel-menu">Отмена</p>
     </div>
-    <textarea class="note note__hidden" name="" id=""></textarea>
   </body>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/note.js"></script>
+  <script src="assets/js/notes/addNote.js"></script>
+  <script src="assets/js/notes/changeNotesVisibility.js"></script>
+  <script src="assets/js/notes/noteMenu.js"></script>
   <script src="assets/js/changeHero.js"></script>
   <script src="assets/js/roles.js"></script>
 </html>
