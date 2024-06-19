@@ -18,7 +18,7 @@ function cancelContextMenu() {
   noteMenu.style.height = 0;
 }
 
-let observer = new MutationObserver(function callback(mutations, observer) {
+function openNoteContextMenu(mutations) {
   const note = mutations[0].addedNodes[0];
 
   note.addEventListener("contextmenu", (e) => {
@@ -33,9 +33,11 @@ let observer = new MutationObserver(function callback(mutations, observer) {
     noteMenu.style.top = e.clientY + "px";
     noteMenu.style.height = noteMenuItemsCount * 39.2 + "px";
   });
-});
+}
 
 noteMenuDelete.addEventListener("click", deleteNote);
 noteMenuCancel.addEventListener("click", cancelContextMenu);
 
-observer.observe(notesContainer, { childList: true });
+new MutationObserver(openNoteContextMenu).observe(notesContainer, {
+  childList: true,
+});
