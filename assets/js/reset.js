@@ -2,6 +2,14 @@ const reset = document.querySelector(".fa-undo-alt");
 const resetButtonsContainer = document.querySelector(".reset-buttons");
 const confirmResetButton = document.querySelector(".reset-buttons .fa-check");
 const cancelResetButton = document.querySelector(".reset-buttons .fa-times");
+const container = document.querySelector(".container");
+let banItems = document.querySelectorAll(".ban-item");
+let pickItems = document.querySelectorAll(".pick-item");
+
+new MutationObserver(() => {
+  banItems = document.querySelectorAll(".ban-item");
+  pickItems = document.querySelectorAll(".pick-item");
+}).observe(container, { childList: true, subtree: true });
 
 function cancelReset() {
   reset.style.display = "";
@@ -31,8 +39,7 @@ confirmResetButton.addEventListener("click", () => {
   clearAll(banItems);
   clearAll(pickItems);
   cancelReset();
+  console.log(banItems);
 });
 
-cancelResetButton.addEventListener("click", () => {
-  cancelReset();
-});
+cancelResetButton.addEventListener("click", cancelReset);

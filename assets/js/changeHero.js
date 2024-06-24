@@ -1,7 +1,7 @@
 const banItems = document.querySelectorAll(".ban-item");
 const pickItems = document.querySelectorAll(".pick-item");
 
-function changeHero(items) {
+export default function changeHero(items) {
   items.forEach((item) => {
     const img = item.children[0];
     item.addEventListener("click", () => {

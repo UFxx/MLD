@@ -336,3 +336,27 @@ body {
 .reset-buttons i {
   transition: 0.3s ease transform;
 }
+
+/* Ranks */
+
+.ranks {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  column-gap: 20px;
+}
+
+.rank {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease color;
+  cursor: pointer;
+}
+
+.rank:hover {
+  color: white;
+}
+
+.rank__active {
+  color: white;
+}
