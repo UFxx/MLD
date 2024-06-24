@@ -60,6 +60,7 @@ body {
 /* Heroes */
 
 .heroes-container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(7, 50px);
@@ -270,7 +271,7 @@ body {
   background-color: #171717;
   width: 150px;
 
-  transition: .3s ease height;
+  transition: 0.3s ease height;
 }
 
 .note-menu p {
@@ -285,4 +286,53 @@ body {
 
 .note-menu p:hover {
   background-color: black;
+}
+
+/* Reset */
+
+.reset {
+  position: absolute;
+  top: -40px;
+  transform: translateX(-50%);
+  left: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.reset i {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease color;
+}
+
+.reset i:hover {
+  color: white;
+}
+
+.reset .fa-undo-alt:hover {
+  animation: reset-rotate infinite 2s ease;
+}
+
+@keyframes reset-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.reset-buttons {
+  position: absolute;
+  display: none;
+  left: -30px;
+  top: 0;
+  column-gap: 20px;
+}
+
+.reset-buttons i:hover {
+  transform: scale(1.1);
+}
+
+.reset-buttons i {
+  transition: 0.3s ease transform;
 }

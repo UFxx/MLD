@@ -3,26 +3,24 @@ const pickItems = document.querySelectorAll(".pick-item");
 
 function changeHero(items) {
   items.forEach((item) => {
+    const img = item.children[0];
     item.addEventListener("click", () => {
       const activeHero = document.querySelector(".hero__active");
       if (
-        item.children[0].getAttribute("src") ===
+        img.getAttribute("src") ===
         "https://cdn-icons-png.flaticon.com/512/25/25333.png"
       ) {
-        item.children[0].setAttribute(
-          "src",
-          activeHero.children[0].getAttribute("src")
-        );
-        item.children[0].setAttribute(
-          "alt",
-          activeHero.children[0].getAttribute("alt")
-        );
+        img.setAttribute("src", activeHero.children[0].getAttribute("src"));
+        img.setAttribute("alt", activeHero.children[0].getAttribute("alt"));
+        // Set hero name to data
+        img.setAttribute("data", activeHero.children[1].textContent);
       } else {
-        item.children[0].setAttribute(
+        img.setAttribute(
           "src",
           "https://cdn-icons-png.flaticon.com/512/25/25333.png"
         );
-        item.children[0].setAttribute("alt", "");
+        img.setAttribute("alt", "");
+        img.setAttribute("data", "");
       }
       activeHero.style.opacity = "50%";
       activeHero.classList.remove("hero__active");
