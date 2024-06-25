@@ -57,11 +57,48 @@ body {
   color: white;
 }
 
+/* Preloader */
+
+.preloader {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  z-index: 1;
+}
+
+.preloader-square {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 100%;
+  animation: preloader 5s infinite linear;
+}
+
+@keyframes preloader {
+  0% {
+    border-radius: 0%;
+    transform: rotate(0);
+  }
+  50% {
+    border-radius: 100%;
+    transform: rotate(360deg);
+  }
+  100% {
+    border-radius: 0;
+    transform: rotate(360deg);
+  }
+}
+
 /* Heroes */
 
 .heroes-container {
   position: relative;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(7, 50px);
   height: calc(600px - 36px);
