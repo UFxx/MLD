@@ -156,6 +156,11 @@ body {
   border: 2px solid white;
 }
 
+.hero__picked {
+  opacity: 50%;
+  z-index: -1;
+}
+
 .team-blue {
   position: absolute;
   left: -70px;
