@@ -145,7 +145,7 @@ const Heroes = [
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/ruby.png",
   },
   {
-    name: "Ли Сун Син",
+    name: "Yi Sun-shin",
     role: "Marksman",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/yisunshin.png",
   },
@@ -470,7 +470,7 @@ const Heroes = [
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/popolandkupa.png",
   },
   {
-    name: "Чонг",
+    name: "Yu Zhong",
     role: "Fighter",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/yuzhong.png",
   },
