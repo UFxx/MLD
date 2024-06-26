@@ -27,7 +27,7 @@ function clearAll(items) {
   });
 
   const heroes = document.querySelectorAll(".hero");
-  heroes.forEach((hero) => (hero.style.opacity = 1));
+  heroes.forEach((hero) => hero.classList.remove("hero__picked"));
 }
 
 reset.addEventListener("click", () => {
@@ -39,7 +39,6 @@ confirmResetButton.addEventListener("click", () => {
   clearAll(banItems);
   clearAll(pickItems);
   cancelReset();
-  console.log(banItems);
 });
 
 cancelResetButton.addEventListener("click", cancelReset);
