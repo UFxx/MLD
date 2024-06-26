@@ -106,6 +106,7 @@ body {
   overflow-x: hidden;
   column-gap: 30px;
   row-gap: 40px;
+  padding: 17px 15px;
 }
 
 .heroes-container::-webkit-scrollbar {
@@ -131,8 +132,8 @@ body {
 }
 
 .hero:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 4px 2px white;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px 1px white;
 }
 
 .hero img {
