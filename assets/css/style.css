@@ -75,21 +75,15 @@ body {
   width: 40px;
   height: 40px;
   background-color: white;
-  border-radius: 100%;
-  animation: preloader 5s infinite linear;
+  border-radius: 10px;
+  animation: preloader 3s infinite linear;
 }
 
 @keyframes preloader {
-  0% {
-    border-radius: 0%;
+  from {
     transform: rotate(0);
   }
-  50% {
-    border-radius: 100%;
-    transform: rotate(360deg);
-  }
-  100% {
-    border-radius: 0;
+  to {
     transform: rotate(360deg);
   }
 }
@@ -133,7 +127,7 @@ body {
 
 .hero:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 10px 1px white;
+  box-shadow: 0 0 7px 1px rgba(255, 255, 255, 0.2);
 }
 
 .hero img {

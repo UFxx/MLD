@@ -7,22 +7,15 @@ export default function changeHero(items) {
     const img = item.children[0];
     item.addEventListener("click", () => {
       const activeHero = document.querySelector(".hero__active");
+      const anyHeroImg = img.getAttribute("src").substring(0, 22);
       if (
         img.getAttribute("src") ===
-        "https://cdn-icons-png.flaticon.com/512/25/25333.png"
+          "https://cdn-icons-png.flaticon.com/512/25/25333.png" ||
+        anyHeroImg
       ) {
-        img.setAttribute("src", activeHero.children[0].getAttribute("src"));
-        img.setAttribute("alt", activeHero.children[0].getAttribute("alt"));
-        img.setAttribute("data", activeHero.children[1].textContent);
-        activeHero.classList.add("hero__picked");
+        heroReplacement(img, activeHero);
       } else {
-        const heroName = img.getAttribute("data");
-        heroNames.forEach((name) => {
-          if (heroName === name.textContent) {
-            name.parentElement.classList.remove("hero__picked");
-          }
-        });
-
+        heroReplacement(img, activeHero);
         img.setAttribute(
           "src",
           "https://cdn-icons-png.flaticon.com/512/25/25333.png"
@@ -36,3 +29,16 @@ export default function changeHero(items) {
 }
 changeHero(banItems);
 changeHero(pickItems);
+
+function heroReplacement(img, activeHero) {
+  const heroName = img.getAttribute("data");
+  heroNames.forEach((name) => {
+    if (heroName === name.textContent) {
+      name.parentElement.classList.remove("hero__picked");
+    }
+    img.setAttribute("src", activeHero.children[0].getAttribute("src"));
+    img.setAttribute("alt", activeHero.children[0].getAttribute("alt"));
+    img.setAttribute("data", activeHero.children[1].textContent);
+    activeHero.classList.add("hero__picked");
+  });
+}
