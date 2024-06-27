@@ -1,0 +1,49 @@
+.reset {
+  position: absolute;
+  top: -40px;
+  transform: translateX(-50%);
+  left: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.reset i {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease color;
+}
+
+.reset i:last-child {
+  margin-left: 10px;
+}
+
+.reset i:hover {
+  color: white;
+}
+
+.reset .fa-undo-alt:hover {
+  animation: reset-rotate infinite 2s ease;
+}
+
+@keyframes reset-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.reset-buttons {
+  position: absolute;
+  display: none;
+  left: -30px;
+  top: 0;
+}
+
+.reset-buttons i:hover {
+  transform: scale(1.1);
+}
+
+.reset-buttons i {
+  transition: 0.3s ease transform;
+}

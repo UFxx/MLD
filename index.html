@@ -6,6 +6,15 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/preloader.css" />
+    <link rel="stylesheet" href="assets/css/heroes.css" />
+    <link rel="stylesheet" href="assets/css/roles.css" />
+    <link rel="stylesheet" href="assets/css/picks.css" />
+    <link rel="stylesheet" href="assets/css/bans.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/notes.css" />
+    <link rel="stylesheet" href="assets/css/ranks.css" />
+    <link rel="stylesheet" href="assets/css/items.css" />
 
     <!-- Font Awesome -->
     <script
@@ -28,6 +37,34 @@
       <div>
         <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span
         ><span>m</span><span>e</span><span></span>
+      </div>
+    </div>
+    <div class="items-container">
+      <div>
+        <ul class="items-categories">
+          <li><button class="categorie__active" value="All">All</button></li>
+          <li><button value="Attack">Attack</button></li>
+          <li><button value="Magic">Magic</button></li>
+          <li><button value="Defense">Defense</button></li>
+          <li><button value="Movement">Movement</button></li>
+        </ul>
+        <div class="items"></div>
+      </div>
+      <div class="builds">
+        <div class="build">
+          <div class="build-hero">
+            <img src="./assets/images/empty.png" alt="" />
+            <div class="build-heroes"></div>
+          </div>
+          <div class="build-items">
+            <img src="./assets/images/empty.png" alt="" />
+            <img src="./assets/images/empty.png" alt="" />
+            <img src="./assets/images/empty.png" alt="" />
+            <img src="./assets/images/empty.png" alt="" />
+            <img src="./assets/images/empty.png" alt="" />
+            <img src="./assets/images/empty.png" alt="" />
+          </div>
+        </div>
       </div>
     </div>
     <div class="container">
@@ -54,108 +91,60 @@
       <div class="team-blue">
         <div class="pick">
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
         </div>
         <div class="ban">
           <div class="ban-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="ban-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="ban-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
         </div>
       </div>
       <div class="team-red">
         <div class="pick">
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="pick-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
         </div>
         <div class="ban">
           <div class="ban-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="ban-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
           <div class="ban-item">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25333.png"
-              alt=""
-            />
+            <img src="./assets/images/empty.png" alt="" />
           </div>
         </div>
       </div>
@@ -172,14 +161,26 @@
       <p class="rank" data="legend">Legend</p>
       <p class="rank" data="mythic">Mythic</p>
     </div>
+    <div class="builder-button">
+      <i class="fas fa-shopping-cart"></i>
+    </div>
   </body>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/notes/addNote.js"></script>
-  <script src="assets/js/notes/changeNotesVisibility.js"></script>
-  <script src="assets/js/notes/noteMenu.js"></script>
-  <script type="module" src="assets/js/changeHero.js"></script>
-  <script src="assets/js/roles.js"></script>
-  <script src="assets/js/reset.js"></script>
-  <script type="module" src="assets/js/ranks.js"></script>
+  <script type="module" src="assets/js/storage.js"></script>
   <script src="assets/js/preloader.js"></script>
+  <!-- Heroes -->
+  <script type="module" src="assets/js/heroes/heroes.js"></script>
+  <script type="module" src="assets/js/heroes/changeHero.js"></script>
+  <script type="module" src="assets/js/heroes/roles.js"></script>
+  <script src="assets/js/heroes/reset.js"></script>
+  <!-- Items -->
+  <script type="module" src="assets/js/items/items.js"></script>
+  <script type="module" src="assets/js/items/categories.js"></script>
+  <script type="module" src="assets/js/items/changeItem.js"></script>
+  <script type="module" src="assets/js/items/setHero.js"></script>
+  <!-- Notes -->
+  <script src="assets/js/notes/addNote.js"></script>
+  <script src="assets/js/notes/noteMenu.js"></script>
+  <!-- Other -->
+  <script type="module" src="assets/js/ranks.js"></script>
+  <script src="assets/js/notes/changeNotesVisibility.js"></script>
 </html>

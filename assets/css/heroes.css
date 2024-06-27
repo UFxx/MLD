@@ -1,0 +1,88 @@
+.heroes-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 50px);
+  height: calc(600px - 36px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  column-gap: 30px;
+  row-gap: 40px;
+  padding: 17px 15px;
+}
+
+.heroes-container::-webkit-scrollbar,
+.items::-webkit-scrollbar,
+.build-heroes::-webkit-scrollbar {
+  width: 4px;
+}
+
+.heroes-container::-webkit-scrollbar-track,
+.items::-webkit-scrollbar-track,
+.build-heroes::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.heroes-container::-webkit-scrollbar-thumb,
+.items::-webkit-scrollbar-thumb,
+.build-heroes::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+
+.hero {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  cursor: pointer;
+
+  transition: 0.3s ease transform, 0.3s ease box-shadow;
+}
+
+.hero:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 7px 1px rgba(255, 255, 255, 0.2);
+}
+
+.hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.hero p {
+  position: absolute;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 5px);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.hero__active {
+  border: 2px solid white;
+}
+
+.hero__picked {
+  opacity: 50%;
+  z-index: -1;
+}
+
+.team-blue {
+  position: absolute;
+  left: -70px;
+  top: 0;
+}
+
+.team-red {
+  position: absolute;
+  right: -70px;
+  top: 0;
+  transform: rotateY(180deg);
+}
+
+.team-red img {
+  transform: rotateY(-180deg);
+}

@@ -1,4 +1,4 @@
-import changeHero from "./changeHero.js";
+import changeHero from "./heroes/changeHero.js";
 
 const ranks = document.querySelectorAll(".rank");
 const blueBans = document.querySelector(".team-blue .ban");
@@ -13,7 +13,7 @@ const redBans = document.querySelector(".team-red .ban");
 });
 
 function createBanItem(team) {
-  const banItem = document.createElement("div")
+  const banItem = document.createElement("div");
   banItem.classList.add("ban-item");
   const banItemImg = document.createElement("img");
   banItemImg.setAttribute(

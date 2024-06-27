@@ -21,7 +21,7 @@ function clearAll(items) {
     const itemImg = item.children[0];
     itemImg.setAttribute(
       "src",
-      "https://cdn-icons-png.flaticon.com/512/25/25333.png"
+      "./assets/images/empty.png"
     );
     itemImg.setAttribute("alt", "");
   });
