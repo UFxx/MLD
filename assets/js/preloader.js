@@ -1,9 +1,11 @@
 const preloader = document.querySelector(".preloader");
 const preloaderText = document.querySelector(".preloader div");
+const builderButton = document.querySelector(".builder-button");
 
 let letterScale = null;
 
 window.addEventListener("DOMContentLoaded", () => {
+  builderButton.style.zIndex = -1;
   preloaderText.style.top = "50%";
   preloaderText.style.transform = "translateY(-50%)";
   letterScale = setInterval(() => {
@@ -36,5 +38,6 @@ window.addEventListener("load", () => {
   }, 900);
   setTimeout(() => {
     preloader.remove();
+    builderButton.style.zIndex = 2;
   }, 1000);
 });

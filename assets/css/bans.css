@@ -1,0 +1,32 @@
+.ban {
+  position: absolute;
+  top: -50px;
+  left: 60px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.ban-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pick-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.ban-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  padding: 5px;
+}

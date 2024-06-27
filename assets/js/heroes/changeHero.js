@@ -7,10 +7,7 @@ export default function changeHero(items) {
     const img = item.children[0];
     item.addEventListener("click", () => {
       const activeHero = document.querySelector(".hero__active");
-      if (
-        img.getAttribute("src") ===
-        "https://cdn-icons-png.flaticon.com/512/25/25333.png"
-      ) {
+      if (img.getAttribute("src") === "./assets/images/empty.png") {
         img.setAttribute("src", activeHero.children[0].getAttribute("src"));
         img.setAttribute("alt", activeHero.children[0].getAttribute("alt"));
         img.setAttribute("data", activeHero.children[1].textContent);
@@ -22,14 +19,13 @@ export default function changeHero(items) {
             name.parentElement.classList.remove("hero__picked");
           }
         });
-        img.setAttribute(
-          "src",
-          "https://cdn-icons-png.flaticon.com/512/25/25333.png"
-        );
+        img.setAttribute("src", "./assets/images/empty.png");
         img.setAttribute("alt", "");
         img.setAttribute("data", "");
       }
-      activeHero.classList.remove("hero__active");
+      try {
+        activeHero.classList.remove("hero__active");
+      } catch {}
     });
   });
 }
