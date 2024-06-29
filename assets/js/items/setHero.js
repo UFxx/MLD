@@ -1,24 +1,43 @@
 import { Heroes } from "../storage.js";
 
-const buildHero = document.querySelector(".build-hero img");
-const buildHeroes = document.querySelector(".build-heroes");
+const buildHeroImg = document.querySelector(".build-hero img");
 
-buildHero.addEventListener("click", () => {
-  buildHeroes.classList.toggle("build-heroes__visible");
-});
+export function setHero(buildHero) {
+  const heroesContainer = document.createElement("div");
+  const build = buildHero.parentElement.parentElement;
 
-Heroes.map((hero) => {
-  const buildHero = document.createElement("img");
-  buildHero.classList.add("build-hero-item");
-  buildHero.setAttribute("src", hero.img);
-  buildHero.setAttribute("alt", hero.name);
+  heroesContainer.classList.add("build-heroes");
+  if (!build.children[4]) {
+    build.appendChild(heroesContainer);
 
-  buildHeroes.appendChild(buildHero);
-});
+    setTimeout(() => {
+      heroesContainer.style.height = "300px";
+    }, 0);
 
-buildHeroes.childNodes.forEach((hero) => {
-  hero.addEventListener("click", () => {
-    buildHero.setAttribute("src", hero.getAttribute("src"));
-    buildHeroes.classList.toggle("build-heroes__visible");
-  });
+    Heroes.map((hero) => {
+      const buildHeroImg = document.createElement("img");
+      buildHeroImg.classList.add("build-hero-item");
+      buildHeroImg.setAttribute("src", hero.img);
+      buildHeroImg.setAttribute("alt", hero.name);
+
+      heroesContainer.appendChild(buildHeroImg);
+    });
+
+    heroesContainer.childNodes.forEach((hero) => {
+      hero.addEventListener("click", () => {
+        heroesContainer.style.height = "0";
+
+        setTimeout(() => {
+          heroesContainer.remove();
+        }, 300);
+
+        buildHero.setAttribute("src", hero.getAttribute("src"));
+        buildHero.setAttribute("alt", hero.getAttribute("alt"));
+      });
+    });
+  }
+}
+
+buildHeroImg.addEventListener("click", () => {
+  setHero(buildHeroImg);
 });

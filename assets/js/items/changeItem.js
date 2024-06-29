@@ -8,21 +8,22 @@ items.forEach((item) => {
   });
 });
 
+export function setItemImg(buildItem) {
+  const activeItem = document.querySelector(".item__active");
+  if (activeItem) {
+    buildItem.setAttribute(
+      "src",
+      activeItem.children[0].children[0].getAttribute("src")
+    );
+    clearActiveItem();
+  } else {
+    buildItem.setAttribute("src", "./assets/images/empty.png");
+  }
+}
+
 buildItems.forEach((buildItem) => {
   buildItem.addEventListener("click", () => {
-    const activeItem = document.querySelector(".item__active");
-    if (activeItem) {
-      buildItem.setAttribute(
-        "src",
-        activeItem.children[0].children[0].getAttribute("src")
-      );
-      clearActiveItem();
-    } else {
-      buildItem.setAttribute(
-        "src",
-        "./assets/images/empty.png"
-      );
-    }
+    setItemImg(buildItem);
   });
 });
 
