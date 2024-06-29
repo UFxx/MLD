@@ -21,7 +21,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 20px 10px 50px 0;
-  width: 570px;
+  width: 515px;
   gap: 10px;
   height: 100svh;
   overflow-y: auto;
@@ -32,26 +32,6 @@
   z-index: 1;
 }
 
-.builder-button {
-  position: absolute;
-  top: 70px;
-  right: 30px;
-}
-
-.builder-button i {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 24px;
-  background-color: transparent;
-  border: none;
-  z-index: 2;
-  cursor: pointer;
-  transition: 0.3s ease color;
-}
-
-.builder-button i:hover {
-  color: white;
-}
-
 .item {
   position: relative;
   display: flex;
@@ -60,7 +40,7 @@
   flex-direction: column;
   cursor: pointer;
   border-radius: 20px;
-  padding: 10px;
+  padding: 7px 5px;
   transition: 0.3s ease background-color;
 }
 
@@ -106,18 +86,38 @@
   color: rgb(202, 202, 23);
 }
 
-.builds {
-  padding: 50px 20px;
-  margin-left: 200px;
-  width: 50%;
+.builds-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 20px;
+  padding: 0 20px;
+  width: calc(100% + 40px);
+  height: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.builds-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.builds-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.builds-container::-webkit-scrollbar-thumb {
+  background-color: gray;
 }
 
 .build {
+  position: relative;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 555px;
-  column-gap: 20px;
+  width: 600px;
+  height: 103px;
   padding: 20px;
   border-radius: 5px;
   background-color: #aaaaaa20;
@@ -143,33 +143,29 @@
 }
 
 .build-items {
-  margin-left: 50px;
-}
-
-.build-hero {
-  position: relative;
+  display: flex;
+  column-gap: 5px;
 }
 
 .build-heroes {
   position: absolute;
   background-color: #aaaaaa40;
-  border-radius: 5px;
-  top: calc(100% + 20px);
-  left: 50%;
-  transform: translate(-50%);
+  border-radius: 5px 0 5px 5px;
+  top: 100%;
+  left: 0;
+  width: 300px;
+  height: 0;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  overflow: hidden;
-  width: 300px;
-  height: 0;
+  z-index: 2;
+  overflow-y: auto;
   transition: 0.3s ease height, 0.3s ease padding;
 }
 
-.build-heroes__visible {
-  height: 300px;
-  padding: 10px;
-  overflow-y: auto;
+.build-hero {
+  position: relative;
 }
 
 .build-hero-item {
@@ -178,4 +174,81 @@
   padding: 5px;
   border: 2px solid white;
   border-radius: 100%;
+}
+
+.builder-button {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+}
+
+.builder-button i {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s ease color;
+}
+
+.builder-button i:hover {
+  color: white;
+}
+
+.build-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% + 10px);
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.build-buttons i {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 22px;
+  transition: 0.3s ease color;
+  cursor: pointer;
+}
+
+.build-buttons i:hover {
+  color: white;
+}
+
+.add-build {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  top: 7%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.add-build button {
+  position: absolute;
+  padding: 10px;
+  border-radius: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.add-build i {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease color;
+}
+
+.add-build button:hover i {
+  color: white;
 }
