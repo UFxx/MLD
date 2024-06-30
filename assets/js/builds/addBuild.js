@@ -1,5 +1,5 @@
 import { setHero } from "./setHero.js";
-import { setItemImg } from "./changeItem.js";
+import { setItem } from "./changeItem.js";
 import { resetBuild } from "./buildOptions.js";
 import { deleteBuild } from "./buildOptions.js";
 
@@ -21,11 +21,28 @@ addBuildButton.addEventListener("click", () => {
   buildItems.classList.add("build-items");
 
   for (let i = 0; i < 6; i++) {
+    const buildItem = document.createElement("div");
+    buildItem.classList.add("build-item");
+
     const buildItemsImg = document.createElement("img");
     buildItemsImg.setAttribute("src", "./assets/images/empty.png");
     buildItemsImg.setAttribute("alt", " ");
 
-    buildItems.appendChild(buildItemsImg);
+    const buildItemCost = document.createElement("p");
+    buildItemCost.classList.add("build-item-cost");
+    buildItemCost.textContent = 0;
+
+    buildItem.appendChild(buildItemsImg);
+    buildItem.appendChild(buildItemCost);
+    buildItems.appendChild(buildItem);
+
+    if (i === 5) {
+      const totalBuildPrice = document.createElement("div");
+      totalBuildPrice.classList.add("total-build-price");
+      totalBuildPrice.textContent = 0;
+
+      buildItems.appendChild(totalBuildPrice);
+    }
   }
 
   const buildSpellImg = document.createElement("img");
@@ -58,23 +75,28 @@ addBuildButton.addEventListener("click", () => {
 
 function buildFunctions(mutations) {
   const buildHero = mutations[2].addedNodes[0];
-  const buildItems = mutations[3].addedNodes[0].childNodes;
+  const buildItems = mutations[3].addedNodes[0];
   const resetBuildButton = mutations[6].addedNodes[0];
   const deleteBuildButton = mutations[7].addedNodes[0];
-
+  
   buildHero.addEventListener("click", () => setHero(buildHero));
 
-  buildItems.forEach((item) =>
-    item.addEventListener("click", () => setItemImg(item))
-  );
+  try {
+    buildItems.childNodes.forEach((buildItem) => {
+      buildItem.children[0].addEventListener("click", () =>
+        setItem(buildItem.children[0])
+      );
+    });
+  } catch {}
 
   deleteBuildButton.addEventListener("click", () =>
     deleteBuild(deleteBuildButton)
   );
 
-  resetBuildButton.addEventListener("click", () =>
-    resetBuild(resetBuildButton)
-  );
+  resetBuildButton.addEventListener("click", () => {
+    console.log(resetBuildButton);
+    resetBuild(resetBuildButton);
+  });
 }
 
 new MutationObserver(buildFunctions).observe(buildsContainer, {
