@@ -18,6 +18,12 @@ export const Items = [
     cost: 2050,
   },
   {
+    name: "Rose Gold Meteor",
+    category: "Attack",
+    img: "assets/images/Items/Attack/Rose_Gold_Meteor.webp",
+    cost: 1820,
+  },
+  {
     name: "Hunter Strike",
     category: "Attack",
     img: "assets/images/Items/Attack/Hunter_Strike.webp",
@@ -1019,6 +1025,11 @@ export const Heroes = [
     name: "Lylia",
     role: "Mage",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/lylia.png",
+  },
+  {
+    name: "Zhuxin",
+    role: "Mage",
+    img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/zhuxin.png",
   },
   {
     name: "Baxia",
