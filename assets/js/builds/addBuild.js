@@ -2,6 +2,7 @@ import { setHero } from "./setHero.js";
 import { setItem } from "./changeItem.js";
 import { resetBuild } from "./buildOptions.js";
 import { deleteBuild } from "./buildOptions.js";
+import { setSpell } from "./buildSpells.js";
 
 const addBuildButton = document.querySelector(".add-build");
 const buildsContainer = document.querySelector(".builds-container");
@@ -76,9 +77,10 @@ addBuildButton.addEventListener("click", () => {
 function buildFunctions(mutations) {
   const buildHero = mutations[2].addedNodes[0];
   const buildItems = mutations[3].addedNodes[0];
+  const buildSpell = mutations[4].addedNodes[0];
   const resetBuildButton = mutations[6].addedNodes[0];
   const deleteBuildButton = mutations[7].addedNodes[0];
-  
+
   buildHero.addEventListener("click", () => setHero(buildHero));
 
   try {
@@ -93,10 +95,11 @@ function buildFunctions(mutations) {
     deleteBuild(deleteBuildButton)
   );
 
-  resetBuildButton.addEventListener("click", () => {
-    console.log(resetBuildButton);
-    resetBuild(resetBuildButton);
-  });
+  resetBuildButton.addEventListener("click", () =>
+    resetBuild(resetBuildButton)
+  );
+
+  buildSpell.addEventListener("click", () => setSpell(buildSpell));
 }
 
 new MutationObserver(buildFunctions).observe(buildsContainer, {

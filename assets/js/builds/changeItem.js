@@ -1,4 +1,3 @@
-const buildItems = document.querySelectorAll(".build-items img");
 const items = document.querySelectorAll(".item");
 
 items.forEach((item) => {
@@ -37,12 +36,6 @@ export function setItem(buildItem) {
     totalBuildPrice(buildItem);
   }
 }
-
-buildItems.forEach((buildItem) => {
-  buildItem.addEventListener("click", () => {
-    setItem(buildItem);
-  });
-});
 
 function clearActiveItem() {
   items.forEach((item) => {
