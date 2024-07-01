@@ -29,6 +29,15 @@ Items.map((item) => {
   const itemCost = document.createElement("p");
   itemCost.textContent = item.cost;
 
+  const itemDescription = document.createElement("div");
+  const itemDescriptionText = document.createElement("p");
+  itemDescriptionText.textContent = item.description;
+
+  const itemDescriptionStats = document.createElement("p");
+  itemDescriptionStats.textContent = item.stats;
+
+  itemDescription.classList.add("item-description");
+
   items.appendChild(createItem);
 
   createItem.appendChild(itemImgContainer);
@@ -37,4 +46,8 @@ Items.map((item) => {
   createItem.appendChild(itemText);
   itemText.appendChild(itemName);
   itemText.appendChild(itemCost);
+
+  itemDescription.appendChild(itemDescriptionStats);
+  itemDescription.appendChild(itemDescriptionText);
+  createItem.appendChild(itemDescription);
 });
