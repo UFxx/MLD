@@ -627,6 +627,11 @@ export const Heroes = [
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/tigreal.png",
   },
   {
+    name: "",
+    role: "",
+    img: "",
+  },
+  {
     name: "Alucard",
     role: "Assassin",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/alucard.png",
@@ -1220,5 +1225,36 @@ export const Heroes = [
     name: "Chip",
     role: "Tank",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/chip.png",
+  },
+];
+
+export const Spells = [
+  { name: "Execute", img: "./assets/images/Spells/Execute.webp" },
+  { name: "Inspire", img: "./assets/images/Spells/Inspire.webp" },
+  { name: "Sprint", img: "./assets/images/Spells/Sprint.webp" },
+  { name: "Revitalize", img: "./assets/images/Spells/Revitalize.webp" },
+  { name: "Aegis", img: "./assets/images/Spells/Aegis.webp" },
+  { name: "Petrify", img: "./assets/images/Spells/Petrify.webp" },
+  { name: "", img: "" },
+  { name: "Purify", img: "./assets/images/Spells/Purify.webp" },
+  { name: "Flameshot", img: "./assets/images/Spells/Flameshot.webp" },
+  { name: "Flicker", img: "./assets/images/Spells/Flicker.webp" },
+  { name: "Arrival", img: "./assets/images/Spells/Arrival.webp" },
+  { name: "Vengeance", img: "./assets/images/Spells/Vengeance.webp" },
+  {
+    name: "Retribution",
+    img: "./assets/images/Spells/Retributions/Retribution.webp",
+  },
+  {
+    name: "Flame Retribution",
+    img: "./assets/images/Spells/Retributions/Flame_Retribution.webp",
+  },
+  {
+    name: "Ice Retribution",
+    img: "./assets/images/Spells/Retributions/Ice_Retribution.webp",
+  },
+  {
+    name: "Bloody Retribution",
+    img: "./assets/images/Spells/Retributions/Bloody_Retribution.webp",
   },
 ];
