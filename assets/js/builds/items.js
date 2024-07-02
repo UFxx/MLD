@@ -8,6 +8,16 @@ builderButton.addEventListener("click", () => {
   itemsContainer.classList.toggle("items-container__visible");
 });
 
+function formattingStat(stat) {
+  const getEveryStat = stat.split("+");
+  const addLineBreaker = getEveryStat.join("<br>+");
+  const deleteFirstLineBreaker = addLineBreaker.substring(
+    4,
+    addLineBreaker.length
+  );
+  return deleteFirstLineBreaker;
+}
+
 Items.map((item) => {
   const createItem = document.createElement("div");
   createItem.classList.add("item");
@@ -29,6 +39,15 @@ Items.map((item) => {
   const itemCost = document.createElement("p");
   itemCost.textContent = item.cost;
 
+  const itemDescription = document.createElement("div");
+  const itemDescriptionText = document.createElement("p");
+  itemDescriptionText.textContent = item.description;
+
+  const itemDescriptionStats = document.createElement("p");
+  itemDescriptionStats.innerHTML = formattingStat(item.stats);
+
+  itemDescription.classList.add("item-description");
+
   items.appendChild(createItem);
 
   createItem.appendChild(itemImgContainer);
@@ -37,4 +56,8 @@ Items.map((item) => {
   createItem.appendChild(itemText);
   itemText.appendChild(itemName);
   itemText.appendChild(itemCost);
+
+  itemDescription.appendChild(itemDescriptionStats);
+  itemDescription.appendChild(itemDescriptionText);
+  createItem.appendChild(itemDescription);
 });
