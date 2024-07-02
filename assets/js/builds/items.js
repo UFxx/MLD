@@ -8,6 +8,16 @@ builderButton.addEventListener("click", () => {
   itemsContainer.classList.toggle("items-container__visible");
 });
 
+function formattingStat(stat) {
+  const getEveryStat = stat.split("+");
+  const addLineBreaker = getEveryStat.join("<br>+");
+  const deleteFirstLineBreaker = addLineBreaker.substring(
+    4,
+    addLineBreaker.length
+  );
+  return deleteFirstLineBreaker;
+}
+
 Items.map((item) => {
   const createItem = document.createElement("div");
   createItem.classList.add("item");
@@ -34,7 +44,7 @@ Items.map((item) => {
   itemDescriptionText.textContent = item.description;
 
   const itemDescriptionStats = document.createElement("p");
-  itemDescriptionStats.textContent = item.stats;
+  itemDescriptionStats.innerHTML = formattingStat(item.stats);
 
   itemDescription.classList.add("item-description");
 

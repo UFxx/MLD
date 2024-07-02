@@ -1,5 +1,6 @@
 const categoriesButtons = document.querySelectorAll(".items-categories button");
 const allItems = document.querySelectorAll(".item");
+const itemsContainer = document.querySelector(".items");
 
 categoriesButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -10,10 +11,10 @@ categoriesButtons.forEach((button) => {
 
     allItems.forEach((item) => {
       item.getAttribute("category") === button.value
-        ? (item.style.display = "flex")
-        : (item.style.display = "none");
+        ? itemsContainer.appendChild(item)
+        : item.remove();
       if (button.value === "All") {
-        item.style.display = "flex";
+        itemsContainer.appendChild(item);
       }
     });
   });
