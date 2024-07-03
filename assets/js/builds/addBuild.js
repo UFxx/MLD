@@ -3,6 +3,7 @@ import { setItem } from "./changeItem.js";
 import { resetBuild } from "./buildOptions.js";
 import { deleteBuild } from "./buildOptions.js";
 import { setSpell } from "./buildSpells.js";
+import { setEmblem } from "./emblems.js";
 
 const addBuildButton = document.querySelector(".add-build");
 const buildsContainer = document.querySelector(".builds-container");
@@ -58,6 +59,24 @@ addBuildButton.addEventListener("click", () => {
   const buildOptionsDeleteButton = document.createElement("i");
   buildOptionsDeleteButton.classList.add("fas", "fa-trash", "delete-build");
 
+  const buildEmblems = document.createElement("div");
+  buildEmblems.classList.add("build-emblems");
+
+  const emblemsFirstSlot = document.createElement("img");
+  emblemsFirstSlot.setAttribute("src", "./assets/images/empty.png");
+  emblemsFirstSlot.setAttribute("alt", " ");
+  emblemsFirstSlot.setAttribute("data", "first-slot");
+
+  const emblemsSecondSlot = document.createElement("img");
+  emblemsSecondSlot.setAttribute("src", "./assets/images/empty.png");
+  emblemsSecondSlot.setAttribute("alt", " ");
+  emblemsSecondSlot.setAttribute("data", "second-slot");
+
+  const emblemsThirdSlot = document.createElement("img");
+  emblemsThirdSlot.setAttribute("src", "./assets/images/empty.png");
+  emblemsThirdSlot.setAttribute("alt", " ");
+  emblemsThirdSlot.setAttribute("data", "third-slot");
+
   buildsContainer.appendChild(build);
 
   build.appendChild(buildHero);
@@ -72,6 +91,12 @@ addBuildButton.addEventListener("click", () => {
 
   buildOptions.appendChild(buildOptionsResetButton);
   buildOptions.appendChild(buildOptionsDeleteButton);
+
+  buildEmblems.appendChild(emblemsFirstSlot);
+  buildEmblems.appendChild(emblemsSecondSlot);
+  buildEmblems.appendChild(emblemsThirdSlot);
+
+  build.appendChild(buildEmblems);
 });
 
 function buildFunctions(mutations) {
@@ -80,6 +105,7 @@ function buildFunctions(mutations) {
   const buildSpell = mutations[4].addedNodes[0];
   const resetBuildButton = mutations[6].addedNodes[0];
   const deleteBuildButton = mutations[7].addedNodes[0];
+  const buildEmblems = mutations[8].addedNodes[0];
 
   buildHero.addEventListener("click", () => setHero(buildHero));
 
@@ -100,6 +126,10 @@ function buildFunctions(mutations) {
   );
 
   buildSpell.addEventListener("click", () => setSpell(buildSpell));
+
+  buildEmblems.childNodes.forEach((slot) => {
+    slot.addEventListener("click", () => setEmblem(slot));
+  });
 }
 
 new MutationObserver(buildFunctions).observe(buildsContainer, {
