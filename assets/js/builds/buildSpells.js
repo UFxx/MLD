@@ -6,7 +6,7 @@ export function setSpell(buildSpell) {
 
   spellsContainer.classList.add("build-spells");
 
-  if (!build.children[4]) {
+  if (!build.children[5]) {
     build.appendChild(spellsContainer);
 
     setTimeout(() => {

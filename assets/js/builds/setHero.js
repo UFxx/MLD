@@ -5,7 +5,7 @@ export function setHero(buildHero) {
   const build = buildHero.parentElement.parentElement;
 
   heroesContainer.classList.add("build-heroes");
-  if (!build.children[4]) {
+  if (!build.children[5]) {
     build.appendChild(heroesContainer);
 
     setTimeout(() => {

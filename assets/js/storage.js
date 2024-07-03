@@ -604,8 +604,7 @@ export const Items = [
     category: "Defense",
     img: "assets/images/Items/Defense/Brute_Force_Breastplate.webp",
     cost: 1870,
-    stats:
-      "+600 HP +23 Физическая защита +10% уменьшение куладуна",
+    stats: "+600 HP +23 Физическая защита +10% уменьшение куладуна",
     description:
       "Уникальная пассивная способность - Brute Force: Каждую секунду после нанесения урона получайте 6 адаптивной атаки и 2% дополнительной скорости передвижения на 4 секунды, до 6 стаков. При полных стаках вы получаете 15% дополнительного сокращения длительности контроля.",
   },
@@ -808,7 +807,8 @@ export const Items = [
     img: "assets/images/Items/Movement/Demon_Shoes.webp",
     cost: 720,
     stats: "+40 Скорость передвижения +10 Реген маны",
-    description: "Уникальная пассивка - Мистицизм: Убийство или помощь вражескому миньону восстанавливает 4% маны. (Ассист происходит, когда миньон умирает в течение 2 секунд после получения урона от героя).",
+    description:
+      "Уникальная пассивка - Мистицизм: Убийство или помощь вражескому миньону восстанавливает 4% маны. (Ассист происходит, когда миньон умирает в течение 2 секунд после получения урона от героя).",
   },
   {
     name: "Rapid Boots",
@@ -816,7 +816,8 @@ export const Items = [
     img: "assets/images/Items/Movement/Rapid_Boots.webp",
     cost: 750,
     stats: "+65 Скорость передвижения +35% уменьшение замедления",
-    description: "Уникальная пассивка - Побочный эффект: При нанесении или получении урона теряет 25 скорости передвижения на 5 секунд.",
+    description:
+      "Уникальная пассивка - Побочный эффект: При нанесении или получении урона теряет 25 скорости передвижения на 5 секунд.",
   },
   {
     name: "Swift Boots",
@@ -848,7 +849,8 @@ export const Items = [
     img: "assets/images/Items/Movement/Tough_Boots.webp",
     cost: 700,
     stats: "+40 Скорость передвижения +22 Магическая защита",
-    description: "Уникальная пассивка - Fortitude: Уменьшает время контроля на 30%.",
+    description:
+      "Уникальная пассивка - Fortitude: Уменьшает время контроля на 30%.",
   },
   {
     name: "Warrior Boots",
@@ -856,7 +858,8 @@ export const Items = [
     img: "assets/images/Items/Movement/Warrior_Boots.webp",
     cost: 720,
     stats: "+40 Скорость передвижения +22 Физическая защита",
-    description: "Уникальная пассивная способность - Valor: Получает 4 дополнительные единицы физической защиты на 3 секунды при получении физического урона, до 20.",
+    description:
+      "Уникальная пассивная способность - Valor: Получает 4 дополнительные единицы физической защиты на 3 секунды при получении физического урона, до 20.",
   },
   {
     name: "Boots",
@@ -1530,4 +1533,99 @@ export const Spells = [
     name: "Bloody Retribution",
     img: "./assets/images/Spells/Retributions/Bloody_Retribution.webp",
   },
+];
+
+export const Emblems = [
+  [
+    { name: "Agility", img: "./assets/images/Emblems/FirstSlot/Agility.webp" },
+    { name: "Fatal", img: "./assets/images/Emblems/FirstSlot/Fatal.webp" },
+    {
+      name: "Firmness",
+      img: "./assets/images/Emblems/FirstSlot/Firmness.webp",
+    },
+    { name: "Inspire", img: "./assets/images/Emblems/FirstSlot/Inspire.webp" },
+    { name: "Rupture", img: "./assets/images/Emblems/FirstSlot/Rupture.webp" },
+    { name: "Swift", img: "./assets/images/Emblems/FirstSlot/Swift.webp" },
+    { name: "Thrill", img: "./assets/images/Emblems/FirstSlot/Thrill.webp" },
+    {
+      name: "Vitality",
+      img: "./assets/images/Emblems/FirstSlot/Vitality.webp",
+    },
+  ],
+  [
+    {
+      name: "Bargain Hunter",
+      img: "./assets/images/Emblems/SecondSlot/Bargain_Hunter.webp",
+    },
+    {
+      name: "Festival Of Blood",
+      img: "./assets/images/Emblems/SecondSlot/Festival_Of_Blood.webp",
+    },
+    {
+      name: "Master Assassin",
+      img: "./assets/images/Emblems/SecondSlot/Master_Assassin.webp",
+    },
+    {
+      name: "Pull Yourself Together",
+      img: "./assets/images/Emblems/SecondSlot/Pull_Yourself_Together.webp",
+    },
+    {
+      name: "Seasoned Hunter",
+      img: "./assets/images/Emblems/SecondSlot/Seasoned_Hunter.webp",
+    },
+    {
+      name: "Tenacity",
+      img: "./assets/images/Emblems/SecondSlot/Tenacity.webp",
+    },
+    {
+      name: "Weapon Master",
+      img: "./assets/images/Emblems/SecondSlot/Weapon_Master.webp",
+    },
+    {
+      name: "Wilderness Blessing",
+      img: "./assets/images/Emblems/SecondSlot/Wilderness_Blessing.webp",
+    },
+  ],
+  [
+    {
+      name: "Brave Smite",
+      img: "./assets/images/Emblems/ThirdSlot/Brave_Smite.webp",
+    },
+    {
+      name: "Concussive Blast",
+      img: "./assets/images/Emblems/ThirdSlot/Concussive_Blast.webp",
+    },
+    {
+      name: "Focusing Mark",
+      img: "./assets/images/Emblems/ThirdSlot/Focusing_Mark.webp",
+    },
+    {
+      name: "Impure Rage",
+      img: "./assets/images/Emblems/ThirdSlot/Impure_Rage.webp",
+    },
+    {
+      name: "Killing Spree",
+      img: "./assets/images/Emblems/ThirdSlot/Killing_Spree.webp",
+    },
+    {
+      name: "Lethal Ignition",
+      img: "./assets/images/Emblems/ThirdSlot/Lethal_Ignition.webp",
+    },
+    {
+      name: "Quantum Charge",
+      img: "./assets/images/Emblems/ThirdSlot/Quantum_Charge.webp",
+    },
+    {
+      name: "Temporal Reign",
+      img: "./assets/images/Emblems/ThirdSlot/Temporal_Reign.webp",
+    },
+    {
+      name: "War Cry",
+      img: "./assets/images/Emblems/ThirdSlot/War_Cry.webp",
+    },
+    {
+      name: "Weakness Finder",
+      img: "./assets/images/Emblems/ThirdSlot/Weakness_Finder.webp",
+    },
+  ],
 ];
