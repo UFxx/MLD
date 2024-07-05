@@ -7,15 +7,19 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/preloader.css" />
-    <link rel="stylesheet" href="assets/css/heroes.css" />
-    <link rel="stylesheet" href="assets/css/roles.css" />
-    <link rel="stylesheet" href="assets/css/picks.css" />
-    <link rel="stylesheet" href="assets/css/bans.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/notes.css" />
-    <link rel="stylesheet" href="assets/css/ranks.css" />
-    <link rel="stylesheet" href="assets/css/items.css" />
-    <link rel="stylesheet" href="assets/css/spells.css" />
+    <!-- Drafter -->
+    <link rel="stylesheet" href="assets/css/drafter/heroes.css" />
+    <link rel="stylesheet" href="assets/css/drafter/roles.css" />
+    <link rel="stylesheet" href="assets/css/drafter/picks.css" />
+    <link rel="stylesheet" href="assets/css/drafter/bans.css" />
+    <link rel="stylesheet" href="assets/css/drafter/reset.css" />
+    <link rel="stylesheet" href="assets/css/drafter/notes.css" />
+    <link rel="stylesheet" href="assets/css/drafter/ranks.css" />
+    <!-- Builder -->
+    <link rel="stylesheet" href="assets/css/builder/items.css" />
+    <link rel="stylesheet" href="assets/css/builder/spells.css" />
+    <!-- Map -->
+    <link rel="stylesheet" href="assets/css/map/map.css" />
 
     <!-- Font Awesome -->
     <script
@@ -140,6 +144,19 @@
         </div>
       </div>
     </div>
+    <div class="map-container">
+      <canvas id="map-canvas"></canvas>
+      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
+      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
+      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
+      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
+      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
+      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
+      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
+      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
+      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
+      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
+    </div>
     <div class="add-note"><i class="fas fa-plus"></i></div>
     <div class="change-note-visibility"><i class="fas fa-eye"></i></div>
     <div class="notes"></div>
@@ -152,8 +169,9 @@
       <p class="rank" data="legend">Legend</p>
       <p class="rank" data="mythic">Mythic</p>
     </div>
-    <div class="builder-button">
-      <i class="fas fa-shopping-cart"></i>
+    <div class="other-modes">
+      <i class="fas fa-gamepad"></i>
+      <i class="fas fa-hammer"></i>
     </div>
   </body>
   <script type="module" src="assets/js/storage.js"></script>
@@ -173,6 +191,9 @@
   <script type="module" src="assets/js/builds/addBuild.js"></script>
   <script type="module" src="assets/js/builds/buildSpells.js"></script>
   <script type="module" src="assets/js/builds/emblems.js"></script>
+  <!-- Map -->
+  <script src="assets/js/map/map.js"></script>
+  <script src="assets/js/map/playerMovement.js"></script>
   <!-- Notes -->
   <script src="assets/js/notes/addNote.js"></script>
   <script src="assets/js/notes/noteMenu.js"></script>
