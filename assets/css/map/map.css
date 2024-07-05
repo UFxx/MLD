@@ -8,6 +8,7 @@
   background-size: cover;
   z-index: 2;
 }
+
 #map-canvas {
   width: 100%;
   height: 100%;
@@ -28,9 +29,9 @@
 }
 
 .player-blue-team {
-  border: 2px solid blue;
+  border: 2px solid rgba(0, 0, 255, 0.5);
 }
 
 .player-red-team {
-  border: 2px solid red;
+  border: 2px solid rgba(255, 0, 0, 0.5);
 }

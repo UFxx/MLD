@@ -45,21 +45,24 @@
 .heroes-container::-webkit-scrollbar,
 .items::-webkit-scrollbar,
 .build-heroes::-webkit-scrollbar,
-.build-spells::-webkit-scrollbar {
+.build-spells::-webkit-scrollbar,
+.map-heroes-container::-webkit-scrollbar {
   width: 4px;
 }
 
 .heroes-container::-webkit-scrollbar-track,
 .items::-webkit-scrollbar-track,
 .build-heroes::-webkit-scrollbar-track,
-.build-spells::-webkit-scrollbar-track {
+.build-spells::-webkit-scrollbar-track,
+.map-heroes-container::-webkit-scrollbar-track {
   background: transparent;
 }
 
 .heroes-container::-webkit-scrollbar-thumb,
 .items::-webkit-scrollbar-thumb,
 .build-heroes::-webkit-scrollbar-thumb,
-.build-spells::-webkit-scrollbar-thumb {
+.build-spells::-webkit-scrollbar-thumb,
+.map-heroes-container::-webkit-scrollbar-thumb {
   background-color: gray;
 }
 

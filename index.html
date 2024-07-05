@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/builder/spells.css" />
     <!-- Map -->
     <link rel="stylesheet" href="assets/css/map/map.css" />
+    <link rel="stylesheet" href="assets/css/map/settings.css" />
 
     <!-- Font Awesome -->
     <script
@@ -74,7 +75,6 @@
           <li><button value="Support">Support</button></li>
         </ul>
       </div>
-
       <div class="heroes-container"></div>
       <div class="reset">
         <i class="fas fa-undo-alt"></i>
@@ -146,16 +146,140 @@
     </div>
     <div class="map-container">
       <canvas id="map-canvas"></canvas>
-      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
-      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
-      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
-      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
-      <img class="player player-blue-team" src="/assets/images/empty.png" alt=""></img>
-      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
-      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
-      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
-      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
-      <img class="player player-red-team" src="/assets/images/empty.png" alt=""></img>
+      <img
+        class="player player-blue-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <img
+        class="player player-blue-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <img
+        class="player player-blue-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <img
+        class="player player-blue-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <img
+        class="player player-blue-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <img
+        class="player player-red-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <img
+        class="player player-red-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <img
+        class="player player-red-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <img
+        class="player player-red-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <img
+        class="player player-red-team"
+        src="./assets/images/empty.png"
+        alt=""
+      />
+      <div class="map-settings-button">
+        <i class="fas fa-wrench"></i>
+      </div>
+      <div class="map-settings">
+        <i class="fas fa-times"></i>
+        <div class="map-heroes">
+          <div class="map-heroes-item">
+            <div class="map-heroes-item-line">
+              <img src="./assets/images/Lines/exp.webp" alt="" />
+            </div>
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+          </div>
+          <div class="map-heroes-item">
+            <div class="map-heroes-item-line">
+              <img src="./assets/images/Lines/gold.webp" alt="" />
+            </div>
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+          </div>
+          <div class="map-heroes-item">
+            <div class="map-heroes-item-line">
+              <img src="./assets/images/Lines/middle.webp" alt="" />
+            </div>
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+          </div>
+          <div class="map-heroes-item">
+            <div class="map-heroes-item-line">
+              <img src="./assets/images/Lines/jungle.webp" alt="" />
+            </div>
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+          </div>
+          <div class="map-heroes-item">
+            <div class="map-heroes-item-line">
+              <img src="./assets/images/Lines/roam.webp" alt="" />
+            </div>
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+            <img
+              class="map-heroes-item-img"
+              src="./assets/images/empty.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="map-heroes-container"></div>
+      </div>
     </div>
     <div class="add-note"><i class="fas fa-plus"></i></div>
     <div class="change-note-visibility"><i class="fas fa-eye"></i></div>
@@ -194,6 +318,8 @@
   <!-- Map -->
   <script src="assets/js/map/map.js"></script>
   <script src="assets/js/map/playerMovement.js"></script>
+  <script type="module" src="assets/js/map/mapSettings.js"></script>
+  <script type="module" src="assets/js/map/changeHero.js"></script>
   <!-- Notes -->
   <script src="assets/js/notes/addNote.js"></script>
   <script src="assets/js/notes/noteMenu.js"></script>
