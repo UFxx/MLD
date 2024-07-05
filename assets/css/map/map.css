@@ -1,0 +1,37 @@
+.map-container {
+  position: absolute;
+  height: 100svh;
+  width: 100svw;
+  top: 100%;
+  left: 0;
+  background: url(../../images/background.png) no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+#map-canvas {
+  width: 100%;
+  height: 100%;
+  background: url(../../images/map.webp) center no-repeat;
+  background-size: contain;
+  margin-left: -6px;
+}
+
+.player {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #aaaaaa40;
+  cursor: grab;
+}
+
+.player-blue-team {
+  border: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+.player-red-team {
+  border: 2px solid rgba(255, 0, 0, 0.5);
+}

@@ -2,10 +2,18 @@ import { Items } from "../storage.js";
 
 const itemsContainer = document.querySelector(".items-container");
 const items = document.querySelector(".items");
-const builderButton = document.querySelector(".builder-button");
+const builderButton = document.querySelector(".fa-hammer");
 
 builderButton.addEventListener("click", () => {
   itemsContainer.classList.toggle("items-container__visible");
+  if (window.scrollY > 0) {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 300);
+  }
 });
 
 function formattingStat(stat) {

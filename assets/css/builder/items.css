@@ -240,26 +240,6 @@
   border-radius: 100%;
 }
 
-.builder-button {
-  position: absolute;
-  top: 70px;
-  right: 30px;
-}
-
-.builder-button i {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 24px;
-  background-color: transparent;
-  border: none;
-  z-index: 2;
-  cursor: pointer;
-  transition: 0.3s ease color;
-}
-
-.builder-button i:hover {
-  color: white;
-}
-
 .build-buttons {
   position: absolute;
   top: 50%;
