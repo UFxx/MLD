@@ -1,7 +1,9 @@
-const mapButton = document.querySelector(".fa-gamepad");
-const mapContainer = document.querySelector(".map-container");
+import { setStartPositions } from "./playerMovement.js";
 
+const canvas = document.querySelector("#map-canvas");
+const mapButton = document.querySelector(".fa-gamepad");
 const mapSettingsButton = document.querySelector(".fa-wrench");
+
 mapButton.addEventListener("click", () => {
   window.scrollTo({
     top: document.body.clientHeight,
@@ -18,4 +20,5 @@ mapButton.addEventListener("click", () => {
   }
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  setStartPositions();
 });

@@ -25,7 +25,10 @@
   height: 40px;
   border-radius: 100%;
   background-color: #aaaaaa40;
+  user-select: none;
   cursor: grab;
+
+  transition: 0.3s ease left, 0.3s ease top;
 }
 
 .player-blue-team {

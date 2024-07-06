@@ -1,9 +1,9 @@
-const clearArrows = document.querySelector(".clear-arrows");
+const clearArrowsButton = document.querySelector(".clear-arrows");
+const canvas = document.querySelector("#map-canvas");
+const ctx = canvas.getContext("2d");
 
-clearArrows.addEventListener("click", () => {
-  arrowBodyWidth.value = 7;
-  arrowHeadlenWidth.value = 10;
-  headlenWidth = arrowHeadlenWidth.value;
-  lineWidth = arrowBodyWidth.value;
+export function clearArrows() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-});
+}
+
+clearArrowsButton.addEventListener("click", clearArrows);

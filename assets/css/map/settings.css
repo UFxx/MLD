@@ -31,6 +31,7 @@
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   border-left: 2px solid white;
+  backdrop-filter: blur(8px);
 
   transition: 0.3s ease width, 0.3s ease left;
 }
@@ -114,8 +115,35 @@
   gap: 10px;
 }
 
+#arrows-mode {
+  display: none;
+}
+
+#arrows-mode + label {
+  position: relative;
+  margin-left: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#arrows-mode + label::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #aaaaaa20;
+  border: 1px solid white;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#arrows-mode:checked ~ label::before {
+  background-color: green;
+}
+
 .map-arrows-settings input {
-  background-color: black;
+  background-color: #aaaaaa20;
   border: none;
   color: white;
   font-size: 16px;
@@ -128,8 +156,18 @@
   color: white;
 }
 
+.arrows-settings-container {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s ease height;
+}
+
+.arrows-settings-container__visible {
+  height: 40px;
+}
+
 .settings-buttons {
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

@@ -1,4 +1,20 @@
+const arrowsMode = document.querySelector("#arrows-mode");
+const canvas = document.querySelector("#map-canvas");
 const ctx = canvas.getContext("2d");
+
+const arrowsSettingsContainer = document.querySelector(
+  ".arrows-settings-container"
+);
+
+arrowsMode.addEventListener("click", () => {
+  arrowsMode.checked
+    ? arrowsSettingsContainer.classList.add(
+        "arrows-settings-container__visible"
+      )
+    : arrowsSettingsContainer.classList.remove(
+        "arrows-settings-container__visible"
+      );
+});
 
 let startX;
 let startY;
@@ -15,7 +31,11 @@ canvas.addEventListener("mouseup", (e) => {
   draw = true;
   endX = e.clientX;
   endY = e.clientY;
-  if (draw && (startX - endX > 25 || startX - endX < -25)) {
+  if (
+    draw &&
+    (startX - endX > 25 || startX - endX < -25) &&
+    arrowsMode.checked
+  ) {
     drawing();
     draw = false;
   }

@@ -18,17 +18,19 @@ const playersStartPositions = [
   ],
 ];
 
-const blueTeamPlayers = document.querySelectorAll(".player-blue-team");
-blueTeamPlayers.forEach((player, i) => {
-  player.style.left = playersStartPositions[0][i].startPositionX + "%";
-  player.style.top = playersStartPositions[0][i].startPositionY + "%";
-});
+export function setStartPositions() {
+  const blueTeamPlayers = document.querySelectorAll(".player-blue-team");
+  blueTeamPlayers.forEach((player, i) => {
+    player.style.left = playersStartPositions[0][i].startPositionX + "%";
+    player.style.top = playersStartPositions[0][i].startPositionY + "%";
+  });
 
-const redTeamPlayers = document.querySelectorAll(".player-red-team");
-redTeamPlayers.forEach((player, i) => {
-  player.style.left = playersStartPositions[1][i].startPositionX + "%";
-  player.style.top = playersStartPositions[1][i].startPositionY + "%";
-});
+  const redTeamPlayers = document.querySelectorAll(".player-red-team");
+  redTeamPlayers.forEach((player, i) => {
+    player.style.left = playersStartPositions[1][i].startPositionX + "%";
+    player.style.top = playersStartPositions[1][i].startPositionY + "%";
+  });
+}
 
 canvas.addEventListener("dragover", (e) => {
   e.preventDefault();
