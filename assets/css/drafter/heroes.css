@@ -13,6 +13,9 @@
   column-gap: 20px;
   top: 70px;
   right: 30px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 .other-modes i {
@@ -46,7 +49,8 @@
 .items::-webkit-scrollbar,
 .build-heroes::-webkit-scrollbar,
 .build-spells::-webkit-scrollbar,
-.map-heroes-container::-webkit-scrollbar {
+.map-heroes-container::-webkit-scrollbar,
+.item-description::-webkit-scrollbar {
   width: 4px;
 }
 
@@ -54,7 +58,8 @@
 .items::-webkit-scrollbar-track,
 .build-heroes::-webkit-scrollbar-track,
 .build-spells::-webkit-scrollbar-track,
-.map-heroes-container::-webkit-scrollbar-track {
+.map-heroes-container::-webkit-scrollbar-track,
+.item-description::-webkit-scrollbar-track {
   background: transparent;
 }
 
@@ -62,7 +67,8 @@
 .items::-webkit-scrollbar-thumb,
 .build-heroes::-webkit-scrollbar-thumb,
 .build-spells::-webkit-scrollbar-thumb,
-.map-heroes-container::-webkit-scrollbar-thumb {
+.map-heroes-container::-webkit-scrollbar-thumb,
+.item-description::-webkit-scrollbar-thumb {
   background-color: gray;
 }
 

@@ -10,13 +10,11 @@ mapSettingsButton.addEventListener("click", () => {
   mapSettingsContainer.classList.add("map-settings__visible");
 
   otherModesButtons.style.display = "none";
-  mapSettingsButton.style.display = "none";
 });
 
 closeMapSettingsButton.addEventListener("click", () => {
   mapSettingsContainer.classList.remove("map-settings__visible");
   otherModesButtons.style.display = "flex";
-  mapSettingsButton.style.display = "block";
 });
 
 const heroesContainer = document.querySelector(".map-heroes-container");

@@ -24,6 +24,11 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   clearInterval(letterScale);
   setTimeout(() => {
     for (let i = 0; i < preloaderText.childElementCount; ) {

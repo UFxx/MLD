@@ -3,18 +3,18 @@ const players = document.querySelectorAll(".player");
 
 const playersStartPositions = [
   [
-    { startPositionX: 70, startPositionY: 79 },
-    { startPositionX: 23, startPositionY: 24 },
+    { startPositionX: 77, startPositionY: 90 },
+    { startPositionX: 14, startPositionY: 15 },
     { startPositionX: 46, startPositionY: 48 },
-    { startPositionX: 35.5, startPositionY: 53 },
-    { startPositionX: 27, startPositionY: 25 },
+    { startPositionX: 30, startPositionY: 54 },
+    { startPositionX: 20, startPositionY: 18 },
   ],
   [
-    { startPositionX: 78, startPositionY: 67 },
-    { startPositionX: 31, startPositionY: 16 },
+    { startPositionX: 90, startPositionY: 75 },
+    { startPositionX: 25, startPositionY: 6 },
     { startPositionX: 51, startPositionY: 42 },
-    { startPositionX: 61, startPositionY: 37 },
-    { startPositionX: 29.5, startPositionY: 22.5 },
+    { startPositionX: 65.5, startPositionY: 34 },
+    { startPositionX: 22.5, startPositionY: 14 },
   ],
 ];
 
