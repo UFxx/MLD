@@ -1,10 +1,32 @@
 const arrowsMode = document.querySelector("#arrows-mode");
 const canvas = document.querySelector("#map-canvas");
 const ctx = canvas.getContext("2d");
-
+const colors = document.querySelectorAll(".color");
 const arrowsSettingsContainer = document.querySelector(
   ".arrows-settings-container"
 );
+const arrowHeadlenWidth = document.querySelector("#arrow-headlen-width");
+const arrowBodyWidth = document.querySelector("#arrow-body-width");
+
+let startX;
+let startY;
+let endX;
+let endY;
+let draw = false;
+let currentLineColor = "red";
+let headlenWidth = arrowHeadlenWidth.value;
+let lineWidth = arrowBodyWidth.value;
+
+colors.forEach((color) => {
+  color.style.backgroundColor = color.classList[1];
+  color.addEventListener("click", () => {
+    colors.forEach((color) => {
+      color.classList.remove("color__active");
+    });
+    color.classList.add("color__active");
+    currentLineColor = color.classList[1];
+  });
+});
 
 arrowsMode.addEventListener("click", () => {
   arrowsMode.checked
@@ -15,12 +37,6 @@ arrowsMode.addEventListener("click", () => {
         "arrows-settings-container__visible"
       );
 });
-
-let startX;
-let startY;
-let endX;
-let endY;
-let draw = false;
 
 canvas.addEventListener("mousedown", (e) => {
   startX = e.clientX;
@@ -41,9 +57,6 @@ canvas.addEventListener("mouseup", (e) => {
   }
 });
 
-const arrowHeadlenWidth = document.querySelector("#arrow-headlen-width");
-const arrowBodyWidth = document.querySelector("#arrow-body-width");
-
 arrowHeadlenWidth.addEventListener("input", () => {
   if (arrowHeadlenWidth.value > 50) {
     arrowHeadlenWidth.value = 0;
@@ -62,11 +75,8 @@ arrowBodyWidth.addEventListener("input", () => {
   lineWidth = arrowBodyWidth.value;
 });
 
-let headlenWidth = arrowHeadlenWidth.value;
-let lineWidth = arrowBodyWidth.value;
-
 function drawing() {
-  ctx.strokeStyle = "red";
+  ctx.strokeStyle = currentLineColor;
   ctx.lineWidth = lineWidth;
   const dx = endX - startX;
   const dy = endY - startY;

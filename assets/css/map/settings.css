@@ -163,7 +163,7 @@
 }
 
 .arrows-settings-container__visible {
-  height: 40px;
+  height: 80px;
 }
 
 .settings-buttons {
@@ -189,4 +189,22 @@
 
 .settings-buttons button:hover {
   background-color: #aaaaaa40;
+}
+
+.change-arrows-color {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #aaaaaa20;
+  display: flex;
+  justify-content: space-around;
+}
+
+.color {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.color__active {
+  border: 2px solid white;
 }
