@@ -93,12 +93,14 @@
   left: 50%;
   color: white;
   width: 250px;
+  height: 250px;
   padding: 20px;
   border-radius: 0 20px 20px 20px;
   transform: scale(0.0001);
   background-color: #141c2f;
   border: 2px solid white;
   z-index: 2;
+  overflow-y: scroll;
 
   transition: 0.3s ease transform;
   transition-delay: 0.7s;

@@ -279,6 +279,28 @@
           </div>
         </div>
         <div class="map-heroes-container"></div>
+        <div class="map-arrows-settings">
+          <div>
+            <input type="checkbox" name="" id="arrows-mode" />
+            <label for="arrows-mode">Arrows mode</label>
+          </div>
+          <div class="arrows-settings-container">
+            <div>
+              <label for="arrow-body-width">Arrow body width: </label>
+              <input type="number" id="arrow-body-width" value="7" />
+            </div>
+            <div>
+              <label for="arrow-headlen-width">Arrow headlen width: </label>
+              <input type="number" id="arrow-headlen-width" value="10" />
+            </div>
+          </div>
+        </div>
+        <div class="settings-buttons">
+          <button class="clear-arrows">Clear arrows</button>
+          <button class="reset-positions">Reset positions</button>
+          <button class="clear-heroes">Clear heroes</button>
+          <button class="clear-all">Clear all</button>
+        </div>
       </div>
     </div>
     <div class="add-note"><i class="fas fa-plus"></i></div>
@@ -316,10 +338,15 @@
   <script type="module" src="assets/js/builds/buildSpells.js"></script>
   <script type="module" src="assets/js/builds/emblems.js"></script>
   <!-- Map -->
-  <script src="assets/js/map/map.js"></script>
-  <script src="assets/js/map/playerMovement.js"></script>
+  <script type="module" src="assets/js/map/map.js"></script>
+  <script type="module" src="assets/js/map/playerMovement.js"></script>
   <script type="module" src="assets/js/map/mapSettings.js"></script>
   <script type="module" src="assets/js/map/changeHero.js"></script>
+  <script type="module" src="assets/js/map/drawArrows.js"></script>
+  <script type="module" src="assets/js/map/clearArrows.js"></script>
+  <script type="module" src="assets/js/map/resetHeroesPosition.js"></script>
+  <script type="module" src="assets/js/map/clearHeroes.js"></script>
+  <script type="module" src="assets/js/map/clearAll.js"></script>
   <!-- Notes -->
   <script src="assets/js/notes/addNote.js"></script>
   <script src="assets/js/notes/noteMenu.js"></script>

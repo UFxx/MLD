@@ -1,6 +1,8 @@
 import { clearAcitveHeroes } from "./mapSettings.js";
 
 const settingsPlayers = document.querySelectorAll(".map-heroes-item-img");
+const blueTeamPlayers = document.querySelectorAll(".player-blue-team");
+const redTeamPlayers = document.querySelectorAll(".player-red-team");
 
 settingsPlayers.forEach((settingPlayer, i) => {
   settingPlayer.addEventListener("click", () => {

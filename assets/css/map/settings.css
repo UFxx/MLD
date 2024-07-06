@@ -1,7 +1,4 @@
 .fa-wrench {
-  position: absolute;
-  top: 70px;
-  left: 90.5%;
   color: rgba(255, 255, 255, 0.5);
   font-size: 22px;
   cursor: pointer;
@@ -34,6 +31,7 @@
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   border-left: 2px solid white;
+  backdrop-filter: blur(8px);
 
   transition: 0.3s ease width, 0.3s ease left;
 }
@@ -108,4 +106,87 @@
 
 .map__hero-active {
   border: 2px solid white !important;
+}
+
+.map-arrows-settings {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#arrows-mode {
+  display: none;
+}
+
+#arrows-mode + label {
+  position: relative;
+  margin-left: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#arrows-mode + label::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #aaaaaa20;
+  border: 1px solid white;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#arrows-mode:checked ~ label::before {
+  background-color: green;
+}
+
+.map-arrows-settings input {
+  background-color: #aaaaaa20;
+  border: none;
+  color: white;
+  font-size: 16px;
+  width: 30px;
+  text-align: center;
+  outline: none;
+}
+
+.map-arrows-settings label {
+  color: white;
+}
+
+.arrows-settings-container {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s ease height;
+}
+
+.arrows-settings-container__visible {
+  height: 40px;
+}
+
+.settings-buttons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.settings-buttons button {
+  background-color: #aaaaaa20;
+  padding: 5px 10px;
+  border: 2px solid white;
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s ease background-color;
+  white-space: nowrap;
+  width: 45%;
+}
+
+.settings-buttons button:hover {
+  background-color: #aaaaaa40;
 }
