@@ -15,6 +15,7 @@
   background: url(../../images/map.webp) center no-repeat;
   background-size: cover;
   margin-left: -6px;
+  user-select: none;
 }
 
 .player {
@@ -37,4 +38,15 @@
 
 .player-red-team {
   border: 2px solid rgba(255, 0, 0, 0.5);
+}
+
+.selection-square {
+  position: absolute;
+  background-color: rgba(0, 0, 255, 0.1);
+  top: 0;
+  left: 0;
+  border: 2px solid rgba(0, 0, 255, 0.5);
+  user-select: none;
+  border-radius: 5px;
+  z-index: 0;
 }
