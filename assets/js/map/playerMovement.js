@@ -36,9 +36,19 @@ canvas.addEventListener("dragover", (e) => {
   e.preventDefault();
 });
 
+let activePlayers;
+
 players.forEach((player) => {
   player.addEventListener("dragstart", () => {
+    activePlayers = document.querySelectorAll(".player__active");
     player.style.border = "2px solid white";
+
+    if (activePlayers.length > 0) {
+      activePlayers.forEach((activePlayer) => {
+        activePlayer.dataset.startX = parseInt(activePlayer.style.left);
+        activePlayer.dataset.startY = parseInt(activePlayer.style.top);
+      });
+    }
   });
 
   player.addEventListener("dragend", (e) => {
@@ -47,8 +57,25 @@ players.forEach((player) => {
     const top = e.clientY - rect.top;
     const playerTeam = player.classList[1].split("-")[1];
 
-    player.style.left = left - player.clientWidth / 1.6 + "px";
-    player.style.top = top - player.clientHeight / 1.6 + "px";
-    player.style.border = `2px solid ${playerTeam}`;
+    if (activePlayers.length > 0) {
+      activePlayers.forEach((activePlayer) => {
+        const deltaX = left - parseInt(player.dataset.startX);
+        const deltaY = top - parseInt(player.dataset.startY);
+
+        activePlayer.style.left =
+          parseInt(activePlayer.dataset.startX) + deltaX + "px";
+        activePlayer.style.top =
+          parseInt(activePlayer.dataset.startY) + deltaY + "px";
+      });
+    } else {
+      player.style.left = left - player.clientWidth / 1.6 + "px";
+      player.style.top = top - player.clientHeight / 1.6 + "px";
+      player.style.border = `2px solid ${playerTeam}`;
+    }
+
+    activePlayers.forEach((activePlayer) => {
+      delete activePlayer.dataset.startX;
+      delete activePlayer.dataset.startY;
+    });
   });
 });

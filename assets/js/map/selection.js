@@ -62,13 +62,12 @@ canvas.addEventListener("mousedown", (e) => {
           ) {
             player.classList.add("player__active");
             player.style.border = "2px solid white";
-          } 
-          // else {
-          //   player.classList.remove("player__active");
-          //   player.style.border = `2px solid ${
-          //     player.classList[1].split("-")[1]
-          //   }`;
-          // }
+          } else {
+            player.classList.remove("player__active");
+            player.style.border = `2px solid ${
+              player.classList[1].split("-")[1]
+            }`;
+          }
         });
 
         if (width < 0) {

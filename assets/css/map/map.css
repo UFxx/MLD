@@ -33,11 +33,11 @@
 }
 
 .player-blue-team {
-  border: 2px solid rgba(0, 0, 255, 0.5);
+  border: 2px solid blue;
 }
 
 .player-red-team {
-  border: 2px solid rgba(255, 0, 0, 0.5);
+  border: 2px solid red;
 }
 
 .selection-square {
