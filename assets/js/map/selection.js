@@ -2,12 +2,17 @@ const canvas = document.querySelector("#map-canvas");
 const mapContainer = document.querySelector(".map-container");
 const arrowMode = document.querySelector("#arrows-mode");
 
+// const playersContainer = document.querySelector('.players')
+
 let startX;
 let startY;
 let selectionSquare;
 
 canvas.addEventListener("mousedown", (e) => {
   if (e.altKey) {
+    const selectionSquareWrapper = document.createElement("div");
+    selectionSquareWrapper.classList.add("selection-square-wrapper");
+
     selectionSquare = document.createElement("div");
     selectionSquare.classList.add("selection-square");
 
@@ -17,7 +22,8 @@ canvas.addEventListener("mousedown", (e) => {
     selectionSquare.style.left = startX + "px";
     selectionSquare.style.top = startY + "px";
 
-    mapContainer.appendChild(selectionSquare);
+    selectionSquareWrapper.appendChild(selectionSquare);
+    mapContainer.appendChild(selectionSquareWrapper);
 
     const players = document.querySelectorAll(".player");
 
@@ -91,13 +97,15 @@ canvas.addEventListener("mousedown", (e) => {
     const onMouseUp = () => {
       startX = 0;
       startY = 0;
+      selectionSquareWrapper.remove();
       selectionSquare.remove();
       canvas.removeEventListener("mousemove", onMouseMove);
       canvas.removeEventListener("mouseup", onMouseUp);
     };
     if (!arrowMode.checked) {
-      canvas.addEventListener("mousemove", onMouseMove);
-      canvas.addEventListener("mouseup", onMouseUp);
+      selectionSquareWrapper.addEventListener("mousemove", onMouseMove);
+      selectionSquareWrapper.addEventListener("mouseup", onMouseUp);
+      selectionSquareWrapper.addEventListener("mouseleave", onMouseUp);
     }
   }
 });
