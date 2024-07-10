@@ -2,8 +2,6 @@ const canvas = document.querySelector("#map-canvas");
 const mapContainer = document.querySelector(".map-container");
 const arrowMode = document.querySelector("#arrows-mode");
 
-// const playersContainer = document.querySelector('.players')
-
 let startX;
 let startY;
 let selectionSquare;

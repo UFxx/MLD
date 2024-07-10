@@ -1,0 +1,25 @@
+#search-hero {
+  padding: 5px 0 5px 10px;
+  background-color: #aaaaaa20;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+
+  transition: 0.3s ease background-color;
+}
+
+#search-hero::placeholder {
+  color: white;
+  transition: 0.3s ease transform;
+}
+
+#search-hero:hover,
+#search-hero:focus {
+  background-color: #aaaaaa40;
+}
+
+#search-hero:focus::placeholder {
+  transform: translateY(-150%);
+}
