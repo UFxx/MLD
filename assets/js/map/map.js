@@ -3,6 +3,7 @@ import { setStartPositions } from "./playerMovement.js";
 const canvas = document.querySelector("#map-canvas");
 const mapButton = document.querySelector(".fa-gamepad");
 const mapSettingsButton = document.querySelector(".fa-wrench");
+const otherModesButtons = document.querySelector(".other-modes");
 
 mapButton.addEventListener("click", () => {
   window.scrollTo({

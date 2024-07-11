@@ -7,6 +7,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/preloader.css" />
+    <link rel="stylesheet" href="assets/css/search.css" />
     <!-- Drafter -->
     <link rel="stylesheet" href="assets/css/drafter/heroes.css" />
     <link rel="stylesheet" href="assets/css/drafter/roles.css" />
@@ -15,7 +16,6 @@
     <link rel="stylesheet" href="assets/css/drafter/reset.css" />
     <link rel="stylesheet" href="assets/css/drafter/notes.css" />
     <link rel="stylesheet" href="assets/css/drafter/ranks.css" />
-    <link rel="stylesheet" href="assets/css/drafter/search.css" />
     <!-- Builder -->
     <link rel="stylesheet" href="assets/css/builder/items.css" />
     <link rel="stylesheet" href="assets/css/builder/spells.css" />
@@ -37,7 +37,7 @@
       rel="stylesheet"
     />
 
-    <title>MLD</title>
+    <title>MLDrafter</title>
   </head>
   <body>
     <div class="preloader">
@@ -55,7 +55,10 @@
           <li><button value="Defense">Defense</button></li>
           <li><button value="Movement">Movement</button></li>
         </ul>
-        <div class="items"></div>
+        <div class="items-search">
+          <input id="search-item" type="text" placeholder="Enter item name" autocomplete="off" />
+        </div>
+        <div class="items scroll-container"></div>
       </div>
       <div class="builds">
         <div class="builds-container"></div>
@@ -77,9 +80,9 @@
         </ul>
       </div>
       <div class="heroes-search">
-        <input id="search-hero" type="text" placeholder="Enter hero name" />
+        <input id="search-hero" type="text" placeholder="Enter hero name" autocomplete="off" />
       </div>
-      <div class="heroes-container"></div>
+      <div class="heroes-container scroll-container"></div>
       <div class="reset">
         <i class="fas fa-undo-alt"></i>
         <div class="reset-buttons">
@@ -203,7 +206,7 @@
       <div class="map-settings-button">
         <i class="fas fa-wrench"></i>
       </div>
-      <div class="map-settings">
+      <div class="map-settings scroll-container">
         <i class="fas fa-times"></i>
         <div class="map-heroes">
           <div class="map-heroes-item">
@@ -282,7 +285,7 @@
             />
           </div>
         </div>
-        <div class="map-heroes-container"></div>
+        <div class="map-heroes-container scroll-container"></div>
         <div class="map-arrows-settings">
           <div>
             <input type="checkbox" name="" id="arrows-mode" />
@@ -321,6 +324,12 @@
       <p class="delete-note">Удалить заметку</p>
       <p class="cancel-menu">Отмена</p>
     </div>
+    <div class="language">
+      <ul>
+        <li class="language__active" data="0">ENG</li>
+        <li data="1">RUS</li>
+      </ul>
+    </div>
     <div class="ranks">
       <p class="rank rank__active" data="epic">Epic</p>
       <p class="rank" data="legend">Legend</p>
@@ -332,14 +341,14 @@
     </div>
   </body>
   <script type="module" src="assets/js/storage.js"></script>
-  <script src="assets/js/preloader.js"></script>
+  <script type="module" src="assets/js/preloader.js"></script>
   <!-- Heroes -->
   <script type="module" src="assets/js/heroes/heroes.js"></script>
   <script type="module" src="assets/js/heroes/changeHero.js"></script>
   <script type="module" src="assets/js/heroes/roles.js"></script>
   <script src="assets/js/heroes/reset.js"></script>
   <script src="assets/js/heroes/cancelHero.js"></script>
-  <script src="assets/js/heroes/search.js"></script>
+  <script src="assets/js/heroes/searchHero.js"></script>
   <!-- Builds -->
   <script type="module" src="assets/js/builds/items.js"></script>
   <script type="module" src="assets/js/builds/categories.js"></script>
@@ -349,6 +358,7 @@
   <script type="module" src="assets/js/builds/addBuild.js"></script>
   <script type="module" src="assets/js/builds/buildSpells.js"></script>
   <script type="module" src="assets/js/builds/emblems.js"></script>
+  <script type="module" src="assets/js/builds/searchItem.js"></script>
   <!-- Map -->
   <script type="module" src="assets/js/map/map.js"></script>
   <script type="module" src="assets/js/map/playerMovement.js"></script>
@@ -363,7 +373,8 @@
   <!-- Notes -->
   <script src="assets/js/notes/addNote.js"></script>
   <script src="assets/js/notes/noteMenu.js"></script>
+  <script src="assets/js/notes/changeNotesVisibility.js"></script>
   <!-- Other -->
   <script type="module" src="assets/js/ranks.js"></script>
-  <script src="assets/js/notes/changeNotesVisibility.js"></script>
+  <script type="module" src="assets/js/changeLanguage.js"></script>
 </html>

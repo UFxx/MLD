@@ -17,7 +17,57 @@ body {
   overflow: hidden;
 }
 
+.other-modes {
+  position: fixed;
+  display: flex;
+  column-gap: 20px;
+  top: 90px;
+  right: 30px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.other-modes i {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s ease color;
+}
+
+.other-modes i:hover {
+  color: white;
+}
+
+.fa-wrench {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1;
+
+  transition: 0.3s ease color;
+}
+
+.fa-wrench:hover {
+  color: white;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   display: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: gray;
 }

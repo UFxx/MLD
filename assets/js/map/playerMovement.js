@@ -7,14 +7,14 @@ const playersStartPositions = [
     { startPositionX: 1200, startPositionY: 650 },
     { startPositionX: 680, startPositionY: 360 },
     { startPositionX: 470, startPositionY: 400 },
-    { startPositionX: 300, startPositionY: 120 },
+    { startPositionX: 600, startPositionY: 330 },
   ],
   [
     { startPositionX: 350, startPositionY: 50 },
     { startPositionX: 1350, startPositionY: 550 },
     { startPositionX: 800, startPositionY: 300 },
     { startPositionX: 1000, startPositionY: 240 },
-    { startPositionX: 340, startPositionY: 100 },
+    { startPositionX: 750, startPositionY: 240 },
   ],
 ];
 

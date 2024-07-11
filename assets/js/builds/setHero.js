@@ -5,6 +5,7 @@ export function setHero(buildHero) {
   const build = buildHero.parentElement.parentElement;
 
   heroesContainer.classList.add("build-heroes");
+  heroesContainer.classList.add("scroll-container");
   if (!build.children[5]) {
     build.appendChild(heroesContainer);
 
