@@ -1,7 +1,7 @@
-const search = document.querySelector("#search-hero");
+const searchHero = document.querySelector("#search-hero");
 
-search.addEventListener("input", () => {
-  const searchText = search.value;
+searchHero.addEventListener("input", () => {
+  const searchText = searchHero.value;
   const searchTextLen = searchText.length;
   const heroesNames = document.querySelectorAll(".hero p");
   heroesNames.forEach((heroName) => {

@@ -8,6 +8,7 @@ const categoriesButtons = document.querySelectorAll(
 );
 const ranks = document.querySelectorAll(".rank");
 const searchHeroInput = document.querySelector("#search-hero");
+const searchItemInput = document.querySelector("#search-item");
 const arrowsMode = document.querySelector(".map-arrows-settings div label");
 const arrowsModeInputs = document.querySelectorAll(
   ".arrows-settings-container label"
@@ -46,6 +47,7 @@ updateTextBasedOnLanguage(rolesButtons, translation.roles);
 updateTextBasedOnLanguage(categoriesButtons, translation.categories);
 updateTextBasedOnLanguage(ranks, translation.ranks);
 updateTextBasedOnLanguage(searchHeroInput, translation.searches[0]);
+updateTextBasedOnLanguage(searchItemInput, translation.searches[1]);
 updateTextBasedOnLanguage(arrowsMode, translation.mapSettings.arrowsMode[0]);
 updateTextBasedOnLanguage(
   arrowsModeInputs,

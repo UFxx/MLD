@@ -1,4 +1,5 @@
-#search-hero {
+#search-hero,
+#search-item {
   padding: 5px 0 5px 10px;
   background-color: #aaaaaa20;
   color: white;
@@ -10,16 +11,24 @@
   transition: 0.3s ease background-color;
 }
 
-#search-hero::placeholder {
+#search-hero::placeholder,
+#search-item::placeholder {
   color: white;
   transition: 0.3s ease transform;
 }
 
 #search-hero:hover,
-#search-hero:focus {
+#search-hero:focus,
+#search-item:hover,
+#search-item:focus {
   background-color: #aaaaaa40;
 }
 
-#search-hero:focus::placeholder {
+#search-hero:focus::placeholder,
+#search-item:focus::placeholder {
   transform: translateY(-150%);
+}
+
+#search-item {
+  margin-left: 70px;
 }
