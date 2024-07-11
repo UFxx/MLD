@@ -3,6 +3,7 @@ import { Items } from "../storage.js";
 const itemsContainer = document.querySelector(".items-container");
 const items = document.querySelector(".items");
 const builderButton = document.querySelector(".fa-hammer");
+const language = localStorage.getItem("language");
 
 builderButton.addEventListener("click", () => {
   itemsContainer.classList.toggle("items-container__visible");
@@ -42,17 +43,21 @@ Items.map((item) => {
   itemText.classList.add("item-text");
 
   const itemName = document.createElement("p");
-  itemName.textContent = item.name;
+  itemName.textContent = item.name[language];
 
   const itemCost = document.createElement("p");
   itemCost.textContent = item.cost;
 
   const itemDescription = document.createElement("div");
   const itemDescriptionText = document.createElement("p");
-  itemDescriptionText.textContent = item.description;
+  item.description === ""
+    ? null
+    : (itemDescriptionText.textContent = item.description[language]);
 
   const itemDescriptionStats = document.createElement("p");
-  itemDescriptionStats.innerHTML = formattingStat(item.stats);
+  item.stats === ""
+    ? null
+    : (itemDescriptionStats.innerHTML = formattingStat(item.stats[language]));
 
   itemDescription.classList.add("item-description");
 

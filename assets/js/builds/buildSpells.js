@@ -5,6 +5,7 @@ export function setSpell(buildSpell) {
   const spellsContainer = document.createElement("div");
 
   spellsContainer.classList.add("build-spells");
+  spellsContainer.classList.add("scroll-container");
 
   if (!build.children[5]) {
     build.appendChild(spellsContainer);

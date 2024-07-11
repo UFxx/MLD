@@ -7,31 +7,6 @@
   border-radius: 5px;
 }
 
-.other-modes {
-  position: fixed;
-  display: flex;
-  column-gap: 20px;
-  top: 70px;
-  right: 30px;
-  padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-
-.other-modes i {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 24px;
-  background-color: transparent;
-  border: none;
-  z-index: 2;
-  cursor: pointer;
-  transition: 0.3s ease color;
-}
-
-.other-modes i:hover {
-  color: white;
-}
-
 .heroes-container {
   position: relative;
   display: grid;
@@ -43,33 +18,6 @@
   column-gap: 30px;
   row-gap: 40px;
   padding: 17px 15px;
-}
-
-.heroes-container::-webkit-scrollbar,
-.items::-webkit-scrollbar,
-.build-heroes::-webkit-scrollbar,
-.build-spells::-webkit-scrollbar,
-.map-heroes-container::-webkit-scrollbar,
-.item-description::-webkit-scrollbar {
-  width: 4px;
-}
-
-.heroes-container::-webkit-scrollbar-track,
-.items::-webkit-scrollbar-track,
-.build-heroes::-webkit-scrollbar-track,
-.build-spells::-webkit-scrollbar-track,
-.map-heroes-container::-webkit-scrollbar-track,
-.item-description::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.heroes-container::-webkit-scrollbar-thumb,
-.items::-webkit-scrollbar-thumb,
-.build-heroes::-webkit-scrollbar-thumb,
-.build-spells::-webkit-scrollbar-thumb,
-.map-heroes-container::-webkit-scrollbar-thumb,
-.item-description::-webkit-scrollbar-thumb {
-  background-color: gray;
 }
 
 .hero {
@@ -128,4 +76,30 @@
 
 .team-red img {
   transform: rotateY(-180deg);
+}
+
+.language {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  right: 30px;
+  top: 30px;
+}
+
+.language ul {
+  display: flex;
+  column-gap: 10px;
+}
+
+.language ul li {
+  list-style: none;
+  cursor: pointer;
+  transition: 0.3s ease color;
+}
+
+.language ul li:hover {
+  color: white;
+}
+
+.language__active {
+  color: white;
 }
