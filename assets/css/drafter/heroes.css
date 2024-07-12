@@ -28,12 +28,12 @@
   cursor: pointer;
 
   transition: 0.3s ease transform, 0.3s ease box-shadow;
-  animation: a linear;
+  animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0 cover 20%;
 }
 
-@keyframes a {
+@keyframes appear {
   from {
     opacity: 0;
     scale: 0.01;

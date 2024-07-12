@@ -4,9 +4,11 @@ const itemsContainer = document.querySelector(".items-container");
 const items = document.querySelector(".items");
 const builderButton = document.querySelector(".fa-hammer");
 const language = localStorage.getItem("language");
+const otherModesButtons = document.querySelector(".other-modes");
 
 builderButton.addEventListener("click", () => {
   itemsContainer.classList.toggle("items-container__visible");
+  otherModesButtons.removeChild(otherModesButtons.children[2]); // Remove map settings button
   if (window.scrollY > 0) {
     setTimeout(() => {
       window.scrollTo({
