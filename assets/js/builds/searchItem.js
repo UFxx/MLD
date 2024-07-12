@@ -1,5 +1,11 @@
 const searchItem = document.querySelector("#search-item");
 
+const language = localStorage.getItem("language");
+
+if (language === '1') {
+  searchItem.style.width = '200px'
+}
+
 searchItem.addEventListener("input", () => {
   const searchText = searchItem.value;
   const searchTextLen = searchText.length;
