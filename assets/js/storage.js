@@ -313,7 +313,7 @@ export const Items = [
       "+15% Attack Speed +10% Crit Chance",
       "+15% скорости атаки +10% шанс крита",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Ogre Tomahawk", "Топор великана"],
@@ -321,7 +321,7 @@ export const Items = [
     img: "assets/images/Items/Attack/Ogre_Tomahawk.webp",
     cost: 650,
     stats: ["+25 Physical Attack +230 HP", "+25 Physical Attack +230 HP"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Legion Sword", "Меч легионера"],
@@ -329,7 +329,7 @@ export const Items = [
     img: "assets/images/Items/Attack/Legion_Sword.webp",
     cost: 910,
     stats: ["+60 Physical Attack", "+60 физической атаки"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Regular Spear", "Обычное копье"],
@@ -340,7 +340,7 @@ export const Items = [
       "+20 Physical Attack +10% Attack Speed",
       "+20 Физическая атака +10% скорости атаки",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Expert Gloves", "Перчатки эксперта"],
@@ -348,7 +348,7 @@ export const Items = [
     img: "assets/images/Items/Attack/Expert_Gloves.webp",
     cost: 500,
     stats: ["+30 Adaptive Attack", "+30 Адаптивная атака"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Iron Hunting Bow", "Железный лук охотника"],
@@ -359,7 +359,7 @@ export const Items = [
       "+10 Physical Attack +5% Cooldown Reduction",
       "+10 Физическая атака +5% уменьшение кулдауна",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Vampire Mallet", "Булава вампира"],
@@ -370,7 +370,7 @@ export const Items = [
       "+8 Physical Attack +8% Lifesteal",
       "+8 Физическая атака +8% Вампиризм",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Javelin", "Копье"],
@@ -378,7 +378,7 @@ export const Items = [
     img: "assets/images/Items/Attack/Javelin.webp",
     cost: 320,
     stats: ["+8% Crit Chance", "+8% шанс крита"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Knife", "Нож"],
@@ -386,7 +386,7 @@ export const Items = [
     img: "assets/images/Items/Attack/Knife.webp",
     cost: 280,
     stats: ["+10% Attack Speed", "+10% скорости атаки"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Dagger", "Кинжал"],
@@ -394,14 +394,14 @@ export const Items = [
     img: "assets/images/Items/Attack/Dagger.webp",
     cost: 250,
     stats: ["+15 Physical Attack", "+15 Физическая атака"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Power Potion", "Зелье силы"],
     category: "Attack",
     img: "assets/images/Items/Attack/Power_Potion.webp",
     cost: 1500,
-    stats: "",
+    stats: ["",""],
     description: [
       "Unique Passive - Increase Power: Automatically used after purchasing, giving 30 Physical Attack and 15% of Lifesteal for 120s. Can only have one potion effect at a time.",
       "Уникальная пассивка - Increase Power: Автоматически используется после покупки, давая 30 физической атаки и 15% Lifesteal на 120 с. Одновременно может действовать только одно зелье.",
@@ -653,7 +653,7 @@ export const Items = [
       "+30 Magic Power +5% Movement Speed",
       "+30 Магическая сила +5% Скорость передвижения",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Azure Blade", "Лазурный клинок"],
@@ -678,7 +678,7 @@ export const Items = [
       "+35 Magic Power +20 Mana Regen +8% Cooldown Reduction",
       "+35 Магическая сила +20 Реген маны +8% уменьшение кулдауна",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Magic Wand", "Волшебная палочка"],
@@ -686,7 +686,7 @@ export const Items = [
     img: "assets/images/Items/Magic/Magic_Wand.webp",
     cost: 820,
     stats: ["+45 Magic Power", "+45 Магическая сила"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Mystic Container", "Загадочный сосуд"],
@@ -697,7 +697,7 @@ export const Items = [
       "+15 Magic Power +8% Spell Vamp",
       "+15 Магическая сила +8% Вампиризм от навыков",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Expert Gloves", "Перчатки эксперта"],
@@ -705,7 +705,7 @@ export const Items = [
     img: "assets/images/Items/Magic/Expert_Gloves.webp",
     cost: 500,
     stats: ["+30 Adaptive Attack", "+30 Адаптивная атака"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Book of Sages", "Книга мудрости"],
@@ -716,7 +716,7 @@ export const Items = [
       "+8 Magic Power +5% Cooldown Reduction",
       "+8 Магическая сила +5% уменьшение кулдауна",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Magic Necklace", "Магическое ожерелье"],
@@ -724,7 +724,7 @@ export const Items = [
     img: "assets/images/Items/Magic/Magic_Necklace.webp",
     cost: 120,
     stats: ["+2 Mana Regen", "+2 регенерации маны"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Power Crystal", "Кристалл силы"],
@@ -732,7 +732,7 @@ export const Items = [
     img: "assets/images/Items/Magic/Power_Crystal.webp",
     cost: 220,
     stats: ["+280 Mana", "+280 маны"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Mystery Codex", "Магическая книга"],
@@ -740,14 +740,14 @@ export const Items = [
     img: "assets/images/Items/Magic/Mystery_Codex.webp",
     cost: 300,
     stats: ["+15 Magic Power", "+15 Магическая сила"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Magic Potion", "Зелье магии"],
     category: "Magic",
     img: "assets/images/Items/Magic/Magic_Potion.webp",
     cost: 1500,
-    stats: "",
+    stats: ["",""],
     description: [
       "Unique Passive - Increase Power: Automatically used after purchasing, increases Magic Power by 30 and Cooldown Reduction by 10% for 120s. Can only have one potion effect at a time.",
       "Уникальная пассивка - Increase Power: Автоматически используется после покупки, увеличивает силу магии на 30 и уменьшает время действия на 10% на 120 с. Одновременно может действовать только один эффект зелья.",
@@ -940,7 +940,7 @@ export const Items = [
     img: "assets/images/Items/Defense/Steel_Legplates.webp",
     cost: 630,
     stats: ["+35 Physical Defense", "+35 Физическая защита"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Dreadnaught Armor", "Броня неустрашимости"],
@@ -973,7 +973,7 @@ export const Items = [
     img: "assets/images/Items/Defense/Silence_Robe.webp",
     cost: 1020,
     stats: ["+540 HP +23 Magic Defense", "+540 HP +23 Магическая защита"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Molten Essence", "Расплавленная субстанция"],
@@ -992,7 +992,7 @@ export const Items = [
     img: "assets/images/Items/Defense/Ares_Belt.webp",
     cost: 900,
     stats: ["+770 HP", "+770 HP"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Hero's Ring", "Кольцо героя"],
@@ -1003,7 +1003,7 @@ export const Items = [
       "+150 HP +5% Cooldown Reduction",
       "+150 HP +5% уменьшение кулдауна",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Healing Necklace", "Исцеляющее ожерелье"],
@@ -1011,7 +1011,7 @@ export const Items = [
     img: "assets/images/Items/Defense/Healing_Necklace.webp",
     cost: 140,
     stats: ["+4 HP Regen", "+4 регенерация HP"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Magic Resist Cloak", "Плащ сопротивления магии"],
@@ -1019,7 +1019,7 @@ export const Items = [
     img: "assets/images/Items/Defense/Magic_Resist_Cloak.webp",
     cost: 220,
     stats: ["+14 Magic Defense", "+14 Магическая защита"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Leather Jerkin", "Кожанная броня"],
@@ -1027,7 +1027,7 @@ export const Items = [
     img: "assets/images/Items/Defense/Leather_Jerkin.webp",
     cost: 220,
     stats: ["+14 Physical Defense", "+14 Физическая защита"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Vitality Crystal", "Кристалл здоровья"],
@@ -1035,14 +1035,14 @@ export const Items = [
     img: "assets/images/Items/Defense/Vitality_Crystal.webp",
     cost: 300,
     stats: ["+230 HP", "+230 HP"],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Rock Potion", "Зелье стойкости"],
     category: "Defense",
     img: "assets/images/Items/Defense/Rock_Potion.webp",
     cost: 1500,
-    stats: "",
+    stats: ["",""],
     description: [
       "Unique Passive - Increase Power: Automatically used after purchasing, increases Max HP by 500 and reduces duration of being controlled by 25% for 120s. Can only have one potion effect at a time.",
       "Уникальная пассивка - Increase Power: Автоматически используется после покупки, увеличивает максимальное количество HP на 500 и уменьшает время нахождения под контролем на 25% на 120 с. Одновременно может действовать только одно зелье.",
@@ -1085,7 +1085,7 @@ export const Items = [
       "+40 Movement Speed +15% Attack Speed",
       "+40 Скорость передвижения +15% скорости атаки",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Arcane Boots", "Сапоги заклинателя"],
@@ -1096,7 +1096,7 @@ export const Items = [
       "+40 Movement Speed +10 Magic Penetration",
       "+40 Скорость передвижения +10 Проникновение магии",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Magic Shoes", "Магические ботинки"],
@@ -1107,7 +1107,7 @@ export const Items = [
       "+40 Movement Speed +10% Cooldown Reduction",
       "+40 Скорость передвижения +10% уменьшение кулдауна",
     ],
-    description: "",
+    description: ["",""],
   },
   {
     name: ["Tough Boots", "Прочные сапоги"],
@@ -1143,7 +1143,7 @@ export const Items = [
     img: "assets/images/Items/Movement/Boots.webp",
     cost: 250,
     stats: ["+20 Movement Speed", "+20 Скорость передвижения"],
-    description: "",
+    description: ["",""],
   },
 ];
 
