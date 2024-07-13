@@ -24,6 +24,11 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
+  if (!localStorage.getItem("language")) {
+    localStorage.setItem("language", 0);
+    window.location.href = "";
+  }
+
   setTimeout(() => {
     window.scrollTo({
       top: 0,
