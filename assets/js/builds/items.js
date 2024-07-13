@@ -20,13 +20,17 @@ builderButton.addEventListener("click", () => {
 });
 
 function formattingStat(stat) {
-  const getEveryStat = stat.split("+");
-  const addLineBreaker = getEveryStat.join("<br>+");
-  const deleteFirstLineBreaker = addLineBreaker.substring(
-    4,
-    addLineBreaker.length
-  );
-  return deleteFirstLineBreaker;
+  if (stat) {
+    const getEveryStat = stat.split("+");
+    const addLineBreaker = getEveryStat.join("<br>+");
+    const deleteFirstLineBreaker = addLineBreaker.substring(
+      4,
+      addLineBreaker.length
+    );
+    return deleteFirstLineBreaker;
+  } else {
+    return stat;
+  }
 }
 
 Items.map((item) => {
@@ -57,9 +61,8 @@ Items.map((item) => {
     : (itemDescriptionText.textContent = item.description[language]);
 
   const itemDescriptionStats = document.createElement("p");
-  item.stats === ""
-    ? null
-    : (itemDescriptionStats.innerHTML = formattingStat(item.stats[language]));
+
+  itemDescriptionStats.innerHTML = formattingStat(item.stats[language]);
 
   itemDescription.classList.add("item-description");
 
