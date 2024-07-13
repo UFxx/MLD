@@ -20,17 +20,13 @@ builderButton.addEventListener("click", () => {
 });
 
 function formattingStat(stat) {
-  if (stat) {
-    const getEveryStat = stat.split("+");
-    const addLineBreaker = getEveryStat.join("<br>+");
-    const deleteFirstLineBreaker = addLineBreaker.substring(
-      4,
-      addLineBreaker.length
-    );
-    return deleteFirstLineBreaker;
-  } else {
-    return stat;
-  }
+  const getEveryStat = stat.split("+");
+  const addLineBreaker = getEveryStat.join("<br>+");
+  const deleteFirstLineBreaker = addLineBreaker.substring(
+    4,
+    addLineBreaker.length
+  );
+  return deleteFirstLineBreaker;
 }
 
 Items.map((item) => {
