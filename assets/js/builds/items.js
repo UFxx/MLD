@@ -21,6 +21,7 @@ builderButton.addEventListener("click", () => {
 
 function formattingStat(stat) {
   const getEveryStat = stat.split("+");
+  console.log(getEveryStat);
   const addLineBreaker = getEveryStat.join("<br>+");
   const deleteFirstLineBreaker = addLineBreaker.substring(
     4,
