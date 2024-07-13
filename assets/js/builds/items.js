@@ -20,7 +20,7 @@ builderButton.addEventListener("click", () => {
 });
 
 function formattingStat(stat) {
-  try {
+  if (stat) {
     const getEveryStat = stat.split("+");
     const addLineBreaker = getEveryStat.join("<br>+");
     const deleteFirstLineBreaker = addLineBreaker.substring(
@@ -28,7 +28,9 @@ function formattingStat(stat) {
       addLineBreaker.length
     );
     return deleteFirstLineBreaker;
-  } catch {}
+  } else {
+    return stat;
+  }
 }
 
 Items.map((item) => {
@@ -61,7 +63,6 @@ Items.map((item) => {
   const itemDescriptionStats = document.createElement("p");
 
   itemDescriptionStats.innerHTML = formattingStat(item.stats[language]);
-  console.log(item.stats[language]);
 
   itemDescription.classList.add("item-description");
 
