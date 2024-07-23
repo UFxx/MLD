@@ -60,7 +60,7 @@ Items.map((item) => {
 
   itemDescriptionStats.innerHTML = formattingStat(item.stats[language]);
 
-  itemDescription.classList.add("item-description");
+  itemDescription.classList.add("item-description", "scroll-container");
 
   items.appendChild(createItem);
 

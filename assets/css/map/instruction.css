@@ -1,0 +1,37 @@
+.map-instruction-background {
+  position: absolute;
+  top: 0;
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  z-index: -1;
+
+  transition: 0.3s ease opacity;
+}
+
+.map-instruction-background__visible {
+  opacity: 100;
+  z-index: 1;
+}
+
+.map-instruction {
+  position: relative;
+  padding: 20px;
+  width: 600px;
+  border-radius: 5px;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  z-index: 2;
+}
+
+.map-instruction .fa-times {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}

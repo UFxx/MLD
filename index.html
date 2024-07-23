@@ -22,6 +22,7 @@
     <!-- Map -->
     <link rel="stylesheet" href="assets/css/map/map.css" />
     <link rel="stylesheet" href="assets/css/map/settings.css" />
+    <link rel="stylesheet" href="assets/css/map/instruction.css" />
 
     <!-- Font Awesome -->
     <script
@@ -56,7 +57,12 @@
           <li><button value="Movement">Movement</button></li>
         </ul>
         <div class="items-search">
-          <input id="search-item" type="text" placeholder="Enter item name" autocomplete="off" />
+          <input
+            id="search-item"
+            type="text"
+            placeholder="Enter item name"
+            autocomplete="off"
+          />
         </div>
         <div class="items scroll-container"></div>
       </div>
@@ -80,7 +86,12 @@
         </ul>
       </div>
       <div class="heroes-search">
-        <input id="search-hero" type="text" placeholder="Enter hero name" autocomplete="off" />
+        <input
+          id="search-hero"
+          type="text"
+          placeholder="Enter hero name"
+          autocomplete="off"
+        />
       </div>
       <div class="heroes-container scroll-container"></div>
       <div class="reset">
@@ -206,8 +217,14 @@
       <div class="map-settings-button">
         <i class="fas fa-wrench"></i>
       </div>
+      <div class="map-instruction-background">
+        <div class="map-instruction">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
       <div class="map-settings scroll-container">
         <i class="fas fa-times"></i>
+        <i class="fas fa-info"></i>
         <div class="map-heroes">
           <div class="map-heroes-item">
             <div class="map-heroes-item-line">
@@ -370,6 +387,7 @@
   <script type="module" src="assets/js/map/clearHeroes.js"></script>
   <script type="module" src="assets/js/map/clearAll.js"></script>
   <script type="module" src="assets/js/map/selection.js"></script>
+  <script type="module" src="assets/js/map/instruction.js"></script>
   <!-- Notes -->
   <script src="assets/js/notes/addNote.js"></script>
   <script src="assets/js/notes/noteMenu.js"></script>
