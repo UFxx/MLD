@@ -14,7 +14,7 @@ export function setHero(buildHero) {
     });
 
     Heroes.map((hero) => {
-      if (hero.name === "") {
+      if (hero.name[0] === "") {
         const emptyHero = document.createElement("div");
         emptyHero.style.display = "none";
         heroesContainer.appendChild(emptyHero);
