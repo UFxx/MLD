@@ -1781,6 +1781,10 @@ export const Heroes = [
     role: "Tank",
     img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/chip.png",
   },
+  {name: ['Suyou', 'Су ё'],
+  role: 'Assassin',
+  img: "https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/suyou.png"
+}
 ];
 
 export const Spells = [
