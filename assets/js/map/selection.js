@@ -107,3 +107,14 @@ canvas.addEventListener('mousedown', (e) => {
     }
   }
 });
+
+canvas.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  const players = document.querySelectorAll('.player-container');
+  players.forEach((player) => {
+    if (player.classList.contains('player__active')) {
+      player.classList.remove('player__active');
+      player.style.border = `2px solid ${player.classList[1].split('-')[1]}`;
+    }
+  });
+});
