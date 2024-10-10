@@ -1,29 +1,29 @@
-const canvas = document.querySelector("#map-canvas");
-const mapContainer = document.querySelector(".map-container");
-const arrowMode = document.querySelector("#arrows-mode");
+const canvas = document.querySelector('#map-canvas');
+const mapContainer = document.querySelector('.map-container');
+const arrowMode = document.querySelector('#arrows-mode');
 
 let startX;
 let startY;
 let selectionSquare;
 
-canvas.addEventListener("mousedown", (e) => {
+canvas.addEventListener('mousedown', (e) => {
   if (e.altKey) {
-    const selectionSquareWrapper = document.createElement("div");
-    selectionSquareWrapper.classList.add("selection-square-wrapper");
+    const selectionSquareWrapper = document.createElement('div');
+    selectionSquareWrapper.classList.add('selection-square-wrapper');
 
-    selectionSquare = document.createElement("div");
-    selectionSquare.classList.add("selection-square");
+    selectionSquare = document.createElement('div');
+    selectionSquare.classList.add('selection-square');
 
     startX = e.clientX;
     startY = e.clientY;
 
-    selectionSquare.style.left = startX + "px";
-    selectionSquare.style.top = startY + "px";
+    selectionSquare.style.left = startX + 'px';
+    selectionSquare.style.top = startY + 'px';
 
     selectionSquareWrapper.appendChild(selectionSquare);
     mapContainer.appendChild(selectionSquareWrapper);
 
-    const players = document.querySelectorAll(".player");
+    const players = document.querySelectorAll('.player-container');
 
     const onMouseMove = (e) => {
       if (e.altKey) {
@@ -64,30 +64,30 @@ canvas.addEventListener("mousedown", (e) => {
             selectionLeftBottom ||
             selectionRightBottom
           ) {
-            player.classList.add("player__active");
-            player.style.border = "2px solid white";
+            player.classList.add('player__active');
+            player.style.border = '2px solid white';
           } else {
-            player.classList.remove("player__active");
+            player.classList.remove('player__active');
             player.style.border = `2px solid ${
-              player.classList[1].split("-")[1]
+              player.classList[1].split('-')[1]
             }`;
           }
         });
 
         if (width < 0) {
-          selectionSquare.style.left = currentX + "px";
-          selectionSquare.style.width = -width + "px";
+          selectionSquare.style.left = currentX + 'px';
+          selectionSquare.style.width = -width + 'px';
         } else {
-          selectionSquare.style.left = startX + "px";
-          selectionSquare.style.width = width + "px";
+          selectionSquare.style.left = startX + 'px';
+          selectionSquare.style.width = width + 'px';
         }
 
         if (height < 0) {
-          selectionSquare.style.top = currentY + "px";
-          selectionSquare.style.height = -height + "px";
+          selectionSquare.style.top = currentY + 'px';
+          selectionSquare.style.height = -height + 'px';
         } else {
-          selectionSquare.style.top = startY + "px";
-          selectionSquare.style.height = height + "px";
+          selectionSquare.style.top = startY + 'px';
+          selectionSquare.style.height = height + 'px';
         }
       }
     };
@@ -97,13 +97,13 @@ canvas.addEventListener("mousedown", (e) => {
       startY = 0;
       selectionSquareWrapper.remove();
       selectionSquare.remove();
-      canvas.removeEventListener("mousemove", onMouseMove);
-      canvas.removeEventListener("mouseup", onMouseUp);
+      canvas.removeEventListener('mousemove', onMouseMove);
+      canvas.removeEventListener('mouseup', onMouseUp);
     };
     if (!arrowMode.checked) {
-      selectionSquareWrapper.addEventListener("mousemove", onMouseMove);
-      selectionSquareWrapper.addEventListener("mouseup", onMouseUp);
-      selectionSquareWrapper.addEventListener("mouseleave", onMouseUp);
+      selectionSquareWrapper.addEventListener('mousemove', onMouseMove);
+      selectionSquareWrapper.addEventListener('mouseup', onMouseUp);
+      selectionSquareWrapper.addEventListener('mouseleave', onMouseUp);
     }
   }
 });

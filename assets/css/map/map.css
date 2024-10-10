@@ -17,17 +17,29 @@
   user-select: none;
 }
 
-.player {
+.player-container {
   position: absolute;
   left: 0;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.player-container img:last-child {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 50px;
+}
+
+.player {
   width: 40px;
   height: 40px;
-  border-radius: 100%;
   user-select: none;
+  border-radius: 100%;
   cursor: grab;
-
-  transition: 0.3s ease left, 0.3s ease top;
 }
 
 .player-blue-team {

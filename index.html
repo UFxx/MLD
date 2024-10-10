@@ -164,56 +164,49 @@
     </div>
     <div class="map-container">
       <canvas id="map-canvas"></canvas>
-      <img
-        class="player player-blue-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
-      <img
-        class="player player-blue-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
-      <img
-        class="player player-blue-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
-      <img
-        class="player player-blue-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
-      <img
-        class="player player-blue-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
-      <img
-        class="player player-red-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
-      <img
-        class="player player-red-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
-      <img
-        class="player player-red-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
-      <img
-        class="player player-red-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
-      <img
-        class="player player-red-team"
-        src="./assets/images/empty.png"
-        alt=""
-      />
+
+      <div class="player-container player-blue-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/exp.webp" alt="" />
+      </div>
+      <div class="player-container player-blue-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/gold.webp" alt="" />
+      </div>
+      <div class="player-container player-blue-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/middle.webp" alt="" />
+      </div>
+      <div class="player-container player-blue-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/jungle.webp" alt="" />
+      </div>
+      <div class="player-container player-blue-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/roam.webp" alt="" />
+      </div>
+
+      <div class="player-container player-red-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/exp.webp" alt="" />
+      </div>
+      <div class="player-container player-red-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/gold.webp" alt="" />
+      </div>
+      <div class="player-container player-red-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/middle.webp" alt="" />
+      </div>
+      <div class="player-container player-red-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/jungle.webp" alt="" />
+      </div>
+      <div class="player-container player-red-team">
+        <img class="player" src="./assets/images/empty.png" alt="" />
+        <img src="./assets/images/Lines/roam.webp" alt="" />
+      </div>
+
       <div class="map-settings-button">
         <i class="fas fa-wrench"></i>
       </div>
@@ -356,43 +349,43 @@
       <i class="fas fa-gamepad"></i>
       <i class="fas fa-hammer"></i>
     </div>
+    <script type="module" src="assets/js/storage.js"></script>
+    <script type="module" src="assets/js/preloader.js"></script>
+    <!-- Heroes -->
+    <script type="module" src="assets/js/heroes/heroes.js"></script>
+    <script type="module" src="assets/js/heroes/changeHero.js"></script>
+    <script type="module" src="assets/js/heroes/roles.js"></script>
+    <script src="assets/js/heroes/reset.js"></script>
+    <script src="assets/js/heroes/cancelHero.js"></script>
+    <script src="assets/js/heroes/searchHero.js"></script>
+    <!-- Builds -->
+    <script type="module" src="assets/js/builds/items.js"></script>
+    <script type="module" src="assets/js/builds/categories.js"></script>
+    <script type="module" src="assets/js/builds/changeItem.js"></script>
+    <script type="module" src="assets/js/builds/setHero.js"></script>
+    <script type="module" src="assets/js/builds/buildOptions.js"></script>
+    <script type="module" src="assets/js/builds/addBuild.js"></script>
+    <script type="module" src="assets/js/builds/buildSpells.js"></script>
+    <script type="module" src="assets/js/builds/emblems.js"></script>
+    <script type="module" src="assets/js/builds/searchItem.js"></script>
+    <!-- Map -->
+    <script type="module" src="assets/js/map/map.js"></script>
+    <script type="module" src="assets/js/map/playerMovement.js"></script>
+    <script type="module" src="assets/js/map/mapSettings.js"></script>
+    <script type="module" src="assets/js/map/changeHero.js"></script>
+    <script type="module" src="assets/js/map/drawArrows.js"></script>
+    <script type="module" src="assets/js/map/clearArrows.js"></script>
+    <script type="module" src="assets/js/map/resetHeroesPosition.js"></script>
+    <script type="module" src="assets/js/map/clearHeroes.js"></script>
+    <script type="module" src="assets/js/map/clearAll.js"></script>
+    <script type="module" src="assets/js/map/selection.js"></script>
+    <script type="module" src="assets/js/map/instruction.js"></script>
+    <!-- Notes -->
+    <script src="assets/js/notes/addNote.js"></script>
+    <script src="assets/js/notes/noteMenu.js"></script>
+    <script src="assets/js/notes/changeNotesVisibility.js"></script>
+    <!-- Other -->
+    <script type="module" src="assets/js/ranks.js"></script>
+    <script type="module" src="assets/js/changeLanguage.js"></script>
   </body>
-  <script type="module" src="assets/js/storage.js"></script>
-  <script type="module" src="assets/js/preloader.js"></script>
-  <!-- Heroes -->
-  <script type="module" src="assets/js/heroes/heroes.js"></script>
-  <script type="module" src="assets/js/heroes/changeHero.js"></script>
-  <script type="module" src="assets/js/heroes/roles.js"></script>
-  <script src="assets/js/heroes/reset.js"></script>
-  <script src="assets/js/heroes/cancelHero.js"></script>
-  <script src="assets/js/heroes/searchHero.js"></script>
-  <!-- Builds -->
-  <script type="module" src="assets/js/builds/items.js"></script>
-  <script type="module" src="assets/js/builds/categories.js"></script>
-  <script type="module" src="assets/js/builds/changeItem.js"></script>
-  <script type="module" src="assets/js/builds/setHero.js"></script>
-  <script type="module" src="assets/js/builds/buildOptions.js"></script>
-  <script type="module" src="assets/js/builds/addBuild.js"></script>
-  <script type="module" src="assets/js/builds/buildSpells.js"></script>
-  <script type="module" src="assets/js/builds/emblems.js"></script>
-  <script type="module" src="assets/js/builds/searchItem.js"></script>
-  <!-- Map -->
-  <script type="module" src="assets/js/map/map.js"></script>
-  <script type="module" src="assets/js/map/playerMovement.js"></script>
-  <script type="module" src="assets/js/map/mapSettings.js"></script>
-  <script type="module" src="assets/js/map/changeHero.js"></script>
-  <script type="module" src="assets/js/map/drawArrows.js"></script>
-  <script type="module" src="assets/js/map/clearArrows.js"></script>
-  <script type="module" src="assets/js/map/resetHeroesPosition.js"></script>
-  <script type="module" src="assets/js/map/clearHeroes.js"></script>
-  <script type="module" src="assets/js/map/clearAll.js"></script>
-  <script type="module" src="assets/js/map/selection.js"></script>
-  <script type="module" src="assets/js/map/instruction.js"></script>
-  <!-- Notes -->
-  <script src="assets/js/notes/addNote.js"></script>
-  <script src="assets/js/notes/noteMenu.js"></script>
-  <script src="assets/js/notes/changeNotesVisibility.js"></script>
-  <!-- Other -->
-  <script type="module" src="assets/js/ranks.js"></script>
-  <script type="module" src="assets/js/changeLanguage.js"></script>
 </html>
