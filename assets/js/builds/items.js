@@ -5,9 +5,15 @@ const items = document.querySelector('.items');
 const builderButton = document.querySelector('.fa-hammer');
 const language = localStorage.getItem('language');
 const otherModesButtons = document.querySelector('.other-modes');
+const title = document.querySelector('title');
 
 builderButton.addEventListener('click', () => {
   itemsContainer.classList.toggle('items-container__visible');
+  if (itemsContainer.classList.contains('items-container__visible')) {
+    title.textContent = 'MLBuilder';
+  } else {
+    title.textContent = 'MLDrafter';
+  }
   otherModesButtons.removeChild(otherModesButtons.children[2]); // Remove map settings button
   if (window.scrollY > 0) {
     setTimeout(() => {
