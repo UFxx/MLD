@@ -1,3 +1,5 @@
+import { setStats } from './buildStats.js';
+
 export function resetBuild(button) {
   const buildItems =
     button.parentElement.previousElementSibling.previousElementSibling;
@@ -5,14 +7,16 @@ export function resetBuild(button) {
   const buildSpell = button.parentElement.parentElement.children[2];
   for (let i = 0; i < buildItems.children.length; i++) {
     buildItems.children[i].children[0].setAttribute(
-      "src",
-      "./assets/images/empty.png"
+      'src',
+      './assets/images/empty.png'
     );
-    buildItems.children[i].children[0].setAttribute("alt", " ");
+    buildItems.children[i].setAttribute('data', '');
+    buildItems.children[i].children[0].setAttribute('alt', ' ');
     buildItems.children[i].children[1].textContent = 0;
     totalBuildPrice.textContent = 0;
-    buildSpell.setAttribute("src", "./assets/images/empty.png");
-    buildSpell.setAttribute("alt", "");
+    buildSpell.setAttribute('src', './assets/images/empty.png');
+    buildSpell.setAttribute('alt', '');
+    setStats(buildItems);
   }
 }
 

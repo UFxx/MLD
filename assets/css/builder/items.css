@@ -269,7 +269,7 @@
 .build-emblems {
   position: absolute;
   top: calc(100% + 35px);
-  left: 50%;
+  left: 21%;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
@@ -297,6 +297,26 @@
   z-index: 3;
 
   transition: 0.3s ease height;
+}
+
+.build-stats {
+  position: absolute;
+  height: 95px;
+  width: 200px;
+  top: calc(100% + 35px);
+  left: 67%;
+  color: white;
+  background-color: #aaaaaa20;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.build-stats p {
+  white-space: nowrap;
+  width: 100%;
 }
 
 .add-build {

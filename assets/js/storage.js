@@ -20,7 +20,7 @@ export const Items = [
     cost: 2140,
     stats: [
       '+70 Physical Attack +10% Cooldown Reduction +20% Crit Chance',
-      '+70 Физическая атака +10% сокращение времени действия +20% шанс крита'
+      '+70 Физическая атака +10% Уменьшение кулдауна +20% шанс крита'
     ],
     description: [
       'Unique Passive - Supreme Warrior: After casting an Ultimate, increase Movement Speed by 30% for 7.5 seconds This effect has a 15 seconds cooldown',
@@ -195,8 +195,8 @@ export const Items = [
     img: 'assets/images/Items/Attack/Sky_Piercer.webp',
     cost: 1500,
     stats: [
-      '+60 Адаптивная атака +15 Скорость передвижения',
-      '+60 Adaptive Attack +15 Movement Speed'
+      '+60 Adaptive Attack +15 Movement Speed',
+      '+60 Адаптивная атака +15 Скорость передвижения'
     ],
     description:
       'Уникальная пассивка - Смертоносность: После нанесения урона вражескому герою казнит его, если его HP меньше 4%. Получает 10 стаков "Смертоносности" за каждое убийство и теряет 30% текущего стака за каждую смерть. Каждый стек "Смертоносности" увеличивает порог HP для эффекта казни на 0,1% и накапливается 80 раз.'
@@ -208,7 +208,7 @@ export const Items = [
     cost: 2100,
     stats: [
       '+60 Adaptive Attack +15 Movement Speed',
-      '+35 Физическая атака +40 HP +10% уменьшение кулдауна +12% Вампиризм от навыков'
+      '+35 Физическая атака +400 HP +10% уменьшение кулдауна +12% Вампиризм от навыков'
     ],
     description: [
       'Unique Passive - Lethality: After dealing damage to an enemy hero, executes the hero if their HP is lower than 4%. Gains 10 stack(s) of Lethality for each kill and loses 30% current stack(s) for each death. Each stack of Lethality increases the HP threshold of the execute effect by 0.1%, stacking up 80 times.',
@@ -919,7 +919,7 @@ export const Items = [
     cost: 2250,
     stats: [
       '+40 Adaptive Attack +600 HP +10% Cooldown Reduction +10% Spell Vamp',
-      '+40 Адаптивная атака +600 HP +10% сокращение времени действия +10% Spell Vamp'
+      '+40 Адаптивная атака +600 HP +10% Уменьшение кулдауна +10% Spell Vamp'
     ],
     description: [
       'Unique Passive - Demonize: When HP drops below 40%, gains 30% Damage Reduction for 3 seconds and reduces the skill cooldown by 2 seconds. This effect has a 60 seconds cooldown. Unique Passive - Defiance: For every 1% HP lost, damage is increased by 0.25%, up to 15%.',
@@ -1956,5 +1956,9 @@ export const translation = {
       'Pull on a character to drag it. Hold down ALT, press LMB and move the mouse to select players (all selected characters can be moved). When arrow mode is enabled, you can draw arrows by pressing LMB (start of arrow), then releasing LMB (end of arrow). You can deselect a character by pressing the RMB button',
       'Тяните за персонажа, чтобы перетащить его. Зажмите ALT, нажмите ЛКМ и перемещайте мышь, чтобы выделять игроков (всех выделенных персонажей можно перемещать). Когда режим стрелок включен, можно рисовать стрелки нажимая ЛКМ (начало стрелки), затем отпуская ЛКМ (конец стрелки). Отменить выделение героя можно нажав на ПКМ'
     ]
-  }
+  },
+  buildsCharacteristics: [
+    'Add an item to see the<br> characteristics',
+    'Добавьте предмет, чтобы<br> увидеть характеристики'
+  ]
 };
