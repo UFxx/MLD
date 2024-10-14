@@ -6,7 +6,11 @@ export function setHero(buildHero) {
 
   heroesContainer.classList.add('build-heroes');
   heroesContainer.classList.add('scroll-container');
-  if (!build.children[6]) {
+  if (
+    !build.children[build.children.length - 1].classList.contains(
+      'build-heroes'
+    )
+  ) {
     build.appendChild(heroesContainer);
 
     setTimeout(() => {
@@ -22,7 +26,10 @@ export function setHero(buildHero) {
         const buildHeroImg = document.createElement('img');
         buildHeroImg.classList.add('build-hero-item');
         buildHeroImg.setAttribute('src', hero.img);
-        buildHeroImg.setAttribute('alt', hero.name);
+        buildHeroImg.setAttribute(
+          'alt',
+          hero.name[localStorage.getItem('language')]
+        );
 
         heroesContainer.appendChild(buildHeroImg);
 
@@ -39,4 +46,5 @@ export function setHero(buildHero) {
       }
     });
   }
+  ('build-heroes');
 }

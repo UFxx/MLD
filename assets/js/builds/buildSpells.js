@@ -7,7 +7,11 @@ export function setSpell(buildSpell) {
   spellsContainer.classList.add('build-spells');
   spellsContainer.classList.add('scroll-container');
 
-  if (!build.children[6]) {
+  if (
+    !build.children[build.children.length - 1].classList.contains(
+      'build-spells'
+    )
+  ) {
     build.appendChild(spellsContainer);
 
     setTimeout(() => {

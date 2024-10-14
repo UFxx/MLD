@@ -2,7 +2,7 @@ import { translation } from '../storage.js';
 import { Items } from '../storage.js';
 
 export function setStats(buildItems) {
-  const buildStats = buildItems.parentElement.children[5];
+  const buildStats = buildItems.parentElement.children[6];
   if (getBuildItemsStats(buildItems) === '') {
     buildStats.children[0].innerHTML =
       translation.buildsCharacteristics[localStorage.getItem('language')];

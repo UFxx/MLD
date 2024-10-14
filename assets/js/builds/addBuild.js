@@ -3,6 +3,7 @@ import { setItem } from './changeItem.js';
 import { resetBuild } from './buildOptions.js';
 import { deleteBuild } from './buildOptions.js';
 import { setSpell } from './buildSpells.js';
+import { setBaseEmblem } from './baseEmblems.js';
 import { setEmblem } from './emblems.js';
 import { translation } from '../storage.js';
 
@@ -61,6 +62,14 @@ addBuildButton.addEventListener('click', () => {
   const buildOptionsDeleteButton = document.createElement('i');
   buildOptionsDeleteButton.classList.add('fas', 'fa-trash', 'delete-build');
 
+  const baseBuildEmblem = document.createElement('div');
+  baseBuildEmblem.classList.add('build-base-emblems');
+
+  const baseBuildEmblemSlot = document.createElement('img');
+  baseBuildEmblemSlot.setAttribute('src', './assets/images/empty.png');
+  baseBuildEmblemSlot.setAttribute('alt', ' ');
+  baseBuildEmblemSlot.setAttribute('data', 'base-slot');
+
   const buildEmblems = document.createElement('div');
   buildEmblems.classList.add('build-emblems');
 
@@ -101,6 +110,10 @@ addBuildButton.addEventListener('click', () => {
   buildOptions.appendChild(buildOptionsResetButton);
   buildOptions.appendChild(buildOptionsDeleteButton);
 
+  baseBuildEmblem.appendChild(baseBuildEmblemSlot);
+
+  build.appendChild(baseBuildEmblem);
+
   buildEmblems.appendChild(emblemsFirstSlot);
   buildEmblems.appendChild(emblemsSecondSlot);
   buildEmblems.appendChild(emblemsThirdSlot);
@@ -117,7 +130,8 @@ function buildFunctions(mutations) {
   const buildSpell = mutations[4].addedNodes[0];
   const resetBuildButton = mutations[6].addedNodes[0];
   const deleteBuildButton = mutations[7].addedNodes[0];
-  const buildEmblems = mutations[8].addedNodes[0];
+  const baseBuildEmblem = mutations[8].addedNodes[0];
+  const buildEmblems = mutations[9].addedNodes[0];
 
   buildHero.addEventListener('click', () => setHero(buildHero));
 
@@ -138,6 +152,10 @@ function buildFunctions(mutations) {
   );
 
   buildSpell.addEventListener('click', () => setSpell(buildSpell));
+
+  baseBuildEmblem.children[0].addEventListener('click', () =>
+    setBaseEmblem(baseBuildEmblem.children[0])
+  );
 
   buildEmblems.childNodes.forEach((slot) => {
     slot.addEventListener('click', () => setEmblem(slot));

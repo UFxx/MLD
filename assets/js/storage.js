@@ -1914,6 +1914,16 @@ export const Emblems = [
   ]
 ];
 
+export const BaseEmblems = [
+  { name: 'Common', img: './assets/images/Emblems/Base/Common.webp' },
+  { name: 'Assassin', img: './assets/images/Emblems/Base/Assassin.webp' },
+  { name: 'Fighter', img: './assets/images/Emblems/Base/Fighter.webp' },
+  { name: 'Mage', img: './assets/images/Emblems/Base/Mage.webp' },
+  { name: 'Marksman', img: './assets/images/Emblems/Base/Marksman.webp' },
+  { name: 'Support', img: './assets/images/Emblems/Base/Support.webp' },
+  { name: 'Tank', img: './assets/images/Emblems/Base/Tank.webp' }
+];
+
 export const translation = {
   ranks: [
     ['Epic', 'Эпик'],
