@@ -1785,6 +1785,11 @@ export const Heroes = [
     name: ['Suyou', 'Су ё'],
     role: 'Assassin',
     img: 'https://www.mlbb.site/MLBB-DraftPickSimulator/img/heroes/suyou.png'
+  },
+  {
+    name: ['Lukas', 'Лукас'],
+    role: 'Fighter',
+    img: 'https://mlbb.site/MLBB-DraftPickSimulator/img/heroes/lukas.png'
   }
 ];
 
