@@ -3,8 +3,6 @@ const players = document.querySelectorAll('.player-container');
 
 let playersStartPositions;
 
-console.log(window.innerWidth);
-
 if (window.innerWidth === 1536) {
   playersStartPositions = [
     [

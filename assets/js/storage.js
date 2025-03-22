@@ -1790,6 +1790,11 @@ export const Heroes = [
     name: ['Lukas', 'Лукас'],
     role: 'Fighter',
     img: 'https://mlbb.site/MLBB-DraftPickSimulator/img/heroes/lukas.png'
+  },
+  {
+    name: ['Kalea', 'Калеа'],
+    role: 'Fighter',
+    img: 'https://akmweb.youngjoygame.com/web/svnres/img/mlbb/homepage_1_9_64/100_4f3d4649e301c76daf20bd8811f3095c.png'
   }
 ];
 
@@ -1946,7 +1951,7 @@ export const translation = {
   ],
   categories: [
     ['All', 'Все'],
-    ['Atrack', 'Атака'],
+    ['Attack', 'Атака'],
     ['Magic', 'Магия'],
     ['Defense', 'Защита'],
     ['Movement', 'Движение']
