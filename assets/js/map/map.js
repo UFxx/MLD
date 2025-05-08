@@ -5,11 +5,11 @@ const mapButton = document.querySelector('.fa-gamepad');
 const mapSettingsButton = document.querySelector('.fa-wrench');
 const otherModesButtons = document.querySelector('.other-modes');
 const title = document.querySelector('title');
-const itemsContainer = document.querySelector('.items-container');
 
 mapButton.addEventListener('click', () => {
   window.scrollTo({
     top: document.body.clientHeight,
+    left: 0,
     behavior: 'smooth'
   });
   if (window.scrollY === 0) {
@@ -22,6 +22,7 @@ mapButton.addEventListener('click', () => {
   if (scrollY > 0) {
     window.scrollTo({
       top: 0,
+      left: 0,
       behavior: 'smooth'
     });
     otherModesButtons.removeChild(mapSettingsButton);

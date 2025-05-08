@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="assets/css/map/map.css" />
     <link rel="stylesheet" href="assets/css/map/settings.css" />
     <link rel="stylesheet" href="assets/css/map/instruction.css" />
+    <!-- Tier List -->
+     <link rel="stylesheet" href="assets/css/tier-list/tier-list.css">
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/8a2fbc0c4d.js"
@@ -46,6 +48,7 @@
         ><span>m</span><span>e</span><span></span>
       </div>
     </div>
+
     <div class="items-container">
       <div>
         <ul class="items-categories">
@@ -161,9 +164,9 @@
         </div>
       </div>
     </div>
+
     <div class="map-container">
       <canvas id="map-canvas"></canvas>
-
       <div class="player-container player-blue-team">
         <img class="player" src="./assets/images/empty.png" alt="" />
         <img src="./assets/images/Lines/exp.webp" alt="" />
@@ -326,6 +329,50 @@
         </div>
       </div>
     </div>
+    <div class="tier-list-container">
+      <div class="tier-list__categories">
+        <div class="tier-list__categorie">
+          <div class="tier-list__categorie-letter" data-color="#ff7f7f"><p>S</p></div>
+          <div class="tier-list__categorie-content"></div>
+          <div class="tier-list__categorie-content-settings">
+            <i class="fas fa-cog"></i>
+          </div>
+        </div>
+        <div class="tier-list__categorie">
+          <div class="tier-list__categorie-letter" data-color="#ffbf7f"><p>A</p></div>
+          <div class="tier-list__categorie-content"></div>
+          <div class="tier-list__categorie-content-settings">
+            <i class="fas fa-cog"></i>
+          </div>
+        </div>
+        <div class="tier-list__categorie">
+          <div class="tier-list__categorie-letter" data-color="#ffdf80"><p>B</p></div>
+          <div class="tier-list__categorie-content"></div>
+          <div class="tier-list__categorie-content-settings">
+            <i class="fas fa-cog"></i>
+          </div>
+        </div>
+        <div class="tier-list__categorie">
+          <div class="tier-list__categorie-letter" data-color="#ffff7f"><p>C</p></div>
+          <div class="tier-list__categorie-content"></div>
+          <div class="tier-list__categorie-content-settings">
+            <i class="fas fa-cog"></i>
+          </div>
+        </div>
+      </div>
+      <div class="tier-list__items-container">
+        <div class="tier-list__items-container-settings">
+          <div class="items-container-settings__categories">
+            <p class="items-container__categorie--active" data-id="0">Герои</p>
+            <p data-id="1">Предметы</p>
+            <p data-id="2">Заклинания</p>
+          </div>
+        </div>
+        <div class="items-container__items scroll-container">
+
+        </div>
+      </div>
+    </div>
     <div class="add-note"><i class="fas fa-plus"></i></div>
     <div class="change-note-visibility"><i class="fas fa-eye"></i></div>
     <div class="notes"></div>
@@ -347,6 +394,7 @@
     <div class="other-modes">
       <i class="fas fa-gamepad"></i>
       <i class="fas fa-hammer"></i>
+      <i class="fas fa-th-list"></i>
     </div>
     <script type="module" src="assets/js/storage.js"></script>
     <script type="module" src="assets/js/preloader.js"></script>
@@ -385,6 +433,9 @@
     <script src="assets/js/notes/addNote.js"></script>
     <script src="assets/js/notes/noteMenu.js"></script>
     <script src="assets/js/notes/changeNotesVisibility.js"></script>
+    <!-- TIer List -->
+     <script src="assets/js/tierlist/openTierlist.js"></script>
+     <script type="module" src="assets/js/tierlist/items.js"></script>
     <!-- Other -->
     <script type="module" src="assets/js/ranks.js"></script>
     <script type="module" src="assets/js/changeLanguage.js"></script>

@@ -1789,7 +1789,7 @@ export const Heroes = [
   {
     name: ['Lukas', 'Лукас'],
     role: 'Fighter',
-    img: 'https://mlbb.site/MLBB-DraftPickSimulator/img/heroes/lukas.png'
+    img: 'https://akmweb.youngjoygame.com/web/svnres/img/mlbb/homepage_1_9_20/100_63040edd0cf15b815fcbbb8b2d08d7f7.png'
   },
   {
     name: ['Kalea', 'Калеа'],
@@ -1799,32 +1799,32 @@ export const Heroes = [
 ];
 
 export const Spells = [
-  { name: 'Execute', img: './assets/images/Spells/Execute.webp' },
-  { name: 'Inspire', img: './assets/images/Spells/Inspire.webp' },
-  { name: 'Sprint', img: './assets/images/Spells/Sprint.webp' },
-  { name: 'Revitalize', img: './assets/images/Spells/Revitalize.webp' },
-  { name: 'Aegis', img: './assets/images/Spells/Aegis.webp' },
-  { name: 'Petrify', img: './assets/images/Spells/Petrify.webp' },
+  { name: ['Execute', 'Кара'], img: './assets/images/Spells/Execute.webp' },
+  { name: ['Inspire', 'Вдохновение'], img: './assets/images/Spells/Inspire.webp' },
+  { name: ['Sprint', 'Спринт'], img: './assets/images/Spells/Sprint.webp' },
+  { name: ['Revitalize', 'Исцеление'], img: './assets/images/Spells/Revitalize.webp' },
+  { name: ['Aegis', 'Щит'], img: './assets/images/Spells/Aegis.webp' },
+  { name: ['Petrify', 'Оцепенение'], img: './assets/images/Spells/Petrify.webp' },
   { name: '', img: '' },
-  { name: 'Purify', img: './assets/images/Spells/Purify.webp' },
-  { name: 'Flameshot', img: './assets/images/Spells/Flameshot.webp' },
-  { name: 'Flicker', img: './assets/images/Spells/Flicker.webp' },
-  { name: 'Arrival', img: './assets/images/Spells/Arrival.webp' },
-  { name: 'Vengeance', img: './assets/images/Spells/Vengeance.webp' },
+  { name: ['Purify', 'Очищение'], img: './assets/images/Spells/Purify.webp' },
+  { name: ['Flameshot', 'Огенный выстрел'], img: './assets/images/Spells/Flameshot.webp' },
+  { name: ['Flicker', 'Вспышка'], img: './assets/images/Spells/Flicker.webp' },
+  { name: ['Arrival', 'Прибытие'], img: './assets/images/Spells/Arrival.webp' },
+  { name: ['Vengeance', 'Отомщение'], img: './assets/images/Spells/Vengeance.webp' },
   {
-    name: 'Retribution',
+    name: ['Retribution', 'Возмездие'],
     img: './assets/images/Spells/Retributions/Retribution.webp'
   },
   {
-    name: 'Flame Retribution',
+    name: ['Flame Retribution', 'Огненное возмездие'],
     img: './assets/images/Spells/Retributions/Flame_Retribution.webp'
   },
   {
-    name: 'Ice Retribution',
+    name: ['Ice Retribution', 'Ледяное возмездие'],
     img: './assets/images/Spells/Retributions/Ice_Retribution.webp'
   },
   {
-    name: 'Bloody Retribution',
+    name: ['Bloody Retribution', 'Кровавое возмездие'],
     img: './assets/images/Spells/Retributions/Bloody_Retribution.webp'
   }
 ];
@@ -1956,9 +1956,15 @@ export const translation = {
     ['Defense', 'Защита'],
     ['Movement', 'Движение']
   ],
+  tierListCategories: [
+    ['Heroes', 'Герои'],
+    ['Items', 'Предметы'],
+    ['Spells', 'Заклинания'],
+  ],
   searches: [
     ['Enter hero name', 'Введите имя героя'],
-    ['Enter item name', 'Введите название предмета']
+    ['Enter item name', 'Введите название предмета'],
+    ['Enter item of hero name', 'Введите имя героя или название предмета']
   ],
   mapSettings: {
     arrowsMode: [['Arrows mode', 'Режим стрелок']],

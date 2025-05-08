@@ -16,6 +16,7 @@ const arrowsModeInputs = document.querySelectorAll(
 const mapSettingsButtons = document.querySelectorAll(
   '.settings-buttons button'
 );
+const tierListCategories = document.querySelectorAll('.items-container-settings__categories p');
 
 languages.forEach((language) => {
   language.addEventListener('click', () => {
@@ -54,3 +55,4 @@ updateTextBasedOnLanguage(
   translation.mapSettings.arrowsModeInputs
 );
 updateTextBasedOnLanguage(mapSettingsButtons, translation.mapSettings.buttons);
+updateTextBasedOnLanguage(tierListCategories, translation.tierListCategories)
