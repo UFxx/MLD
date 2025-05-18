@@ -14,7 +14,7 @@ export function appendItems (arr) {
 		itemContainer.draggable = true;
 		itemContainer.addEventListener('click', () => deleteItem(itemContainer))
 
-		const itemImg = document.createElemecd nt('img');
+		const itemImg = document.createElement('img');
 		itemImg.src = item.img;
 		itemImg.alt = item.name;
 		itemContainer.appendChild(itemImg)

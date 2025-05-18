@@ -18,7 +18,7 @@ clearContainerBtns.forEach((btn) => {
 		const container = e.target.closest('.tier-list__categorie').children[1];
 
 		container.childNodes.forEach(item => {
-			itemsContainer.appendChild(item)
+			itemsContainer.prepend(item)
 		})
 
 		clearContainer(container);

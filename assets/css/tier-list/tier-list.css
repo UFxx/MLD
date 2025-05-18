@@ -56,9 +56,9 @@
 }
 
 .tier-list__categorie-content:hover { box-shadow: 0 0 1px 1px #FFFFFF50; }
-
 .tier-list__categorie-content .items-container__item p { display: none; }
 .tier-list__categorie-content .items-container__item img { margin: 0; }
+.tier-list__categorie-content .items-container__item { cursor: no-drop; }
 
 .tier-list__categorie-content-settings {
 	position: absolute;
@@ -66,29 +66,29 @@
 }
 
 .tier-list__search-input {
-  padding: 5px 0 5px 10px;
-  background-color: #aaaaaa20;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  font-size: 14px;
+	padding: 5px 0 5px 10px;
+	background-color: #aaaaaa20;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	font-size: 14px;
 
-  transition: 0.3s ease background-color;
+	transition: 0.3s ease background-color;
 }
 
 .tier-list__search-input::placeholder {
-  color: white;
-  transition: 0.3s ease transform;
+	color: white;
+	transition: 0.3s ease transform;
 }
 
 .tier-list__search-input:hover,
 .tier-list__search-input:focus{
-  background-color: #aaaaaa40;
+	background-color: #aaaaaa40;
 }
 
 .tier-list__search-input:focus::placeholder {
-  transform: translateY(-150%);
+	transform: translateY(-150%);
 }
 
 .tier-list__categorie-content-settings i {
@@ -98,9 +98,7 @@
 	transition: .3s ease color;
 }
 
-.tier-list__categorie-content-settings i:hover {
-	color: white;
-}
+.tier-list__categorie-content-settings i:hover { color: white; }
 
 .tier-list__items-container {
 	position: absolute;
@@ -126,13 +124,9 @@
 	transition: .3s ease color;
 }
 
-.items-container-settings__categories p:hover {
-	color: white;
-}
+.items-container-settings__categories p:hover { color: white; }
 
-.items-container__categorie--active {
-	color: white !important;
-}
+.items-container__categorie--active { color: white !important; }
 
 .items-container__items {
 	display: grid;
@@ -145,6 +139,7 @@
 
 .items-container__item {
 	text-align: center;
+	cursor: grab;
 }
 
 .items-container__item img {
@@ -160,11 +155,11 @@
 	color: white;
 }
 
-.items-container__item:hover > img {
-	box-shadow: 0 0 1px 2px white;
-}
+.items-container__item:hover > img { box-shadow: 0 0 1px 2px white; }
 
 .tier-list__item--active {
 	box-shadow: 0 0 1px 2px white;
 	z-index: -1;
 }
+
+.tier-list__item--active:active { cursor: grabbing; }
