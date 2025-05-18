@@ -1,443 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/preloader.css" />
-    <link rel="stylesheet" href="assets/css/search.css" />
-    <!-- Drafter -->
-    <link rel="stylesheet" href="assets/css/drafter/heroes.css" />
-    <link rel="stylesheet" href="assets/css/drafter/roles.css" />
-    <link rel="stylesheet" href="assets/css/drafter/picks.css" />
-    <link rel="stylesheet" href="assets/css/drafter/bans.css" />
-    <link rel="stylesheet" href="assets/css/drafter/reset.css" />
-    <link rel="stylesheet" href="assets/css/drafter/notes.css" />
-    <link rel="stylesheet" href="assets/css/drafter/ranks.css" />
-    <!-- Builder -->
-    <link rel="stylesheet" href="assets/css/builder/items.css" />
-    <link rel="stylesheet" href="assets/css/builder/spells.css" />
-    <link rel="stylesheet" href="assets/css/builder/builds.css" />
-    <!-- Map -->
-    <link rel="stylesheet" href="assets/css/map/map.css" />
-    <link rel="stylesheet" href="assets/css/map/settings.css" />
-    <link rel="stylesheet" href="assets/css/map/instruction.css" />
-    <!-- Tier List -->
-     <link rel="stylesheet" href="assets/css/tier-list/tier-list.css">
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/8a2fbc0c4d.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Raleway Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/preloader.css" />
+		<link rel="stylesheet" href="assets/css/search.css" />
+		<!-- Drafter -->
+		<link rel="stylesheet" href="assets/css/drafter/heroes.css" />
+		<link rel="stylesheet" href="assets/css/drafter/roles.css" />
+		<link rel="stylesheet" href="assets/css/drafter/picks.css" />
+		<link rel="stylesheet" href="assets/css/drafter/bans.css" />
+		<link rel="stylesheet" href="assets/css/drafter/reset.css" />
+		<link rel="stylesheet" href="assets/css/drafter/notes.css" />
+		<link rel="stylesheet" href="assets/css/drafter/ranks.css" />
+		<!-- Builder -->
+		<link rel="stylesheet" href="assets/css/builder/items.css" />
+		<link rel="stylesheet" href="assets/css/builder/spells.css" />
+		<link rel="stylesheet" href="assets/css/builder/builds.css" />
+		<!-- Map -->
+		<link rel="stylesheet" href="assets/css/map/map.css" />
+		<link rel="stylesheet" href="assets/css/map/settings.css" />
+		<link rel="stylesheet" href="assets/css/map/instruction.css" />
+		<!-- Tier List -->
+		 <link rel="stylesheet" href="assets/css/tier-list/tier-list.css">
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/8a2fbc0c4d.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- Raleway Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
 
-    <title>MLDrafter</title>
-  </head>
-  <body>
-    <div class="preloader">
-      <div>
-        <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span
-        ><span>m</span><span>e</span><span></span>
-      </div>
-    </div>
+		<title>MLDrafter</title>
+	</head>
+	<body>
+		<div class="preloader">
+			<div>
+				<span>W</span><span>e</span><span>l</span><span>c</span><span>o</span
+				><span>m</span><span>e</span><span></span>
+			</div>
+		</div>
 
-    <div class="items-container">
-      <div>
-        <ul class="items-categories">
-          <li><button class="categorie__active" value="All">All</button></li>
-          <li><button value="Attack">Attack</button></li>
-          <li><button value="Magic">Magic</button></li>
-          <li><button value="Defense">Defense</button></li>
-          <li><button value="Movement">Movement</button></li>
-        </ul>
-        <div class="items-search">
-          <input
-            id="search-item"
-            type="text"
-            placeholder="Enter item name"
-            autocomplete="off"
-          />
-        </div>
-        <div class="items scroll-container"></div>
-      </div>
-      <div class="builds">
-        <div class="builds-container"></div>
-        <div class="add-build">
-          <button><i class="fas fa-plus"></i></button>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="roles">
-        <ul>
-          <li><button value="All" class="role__active">All</button></li>
-          <li><button value="Fighter">Fighter</button></li>
-          <li><button value="Mage">Mage</button></li>
-          <li><button value="Marksman">Marksman</button></li>
-          <li><button value="Assassin">Assassin</button></li>
-          <li><button value="Tank">Tank</button></li>
-          <li><button value="Support">Support</button></li>
-        </ul>
-      </div>
-      <div class="heroes-search">
-        <input
-          id="search-hero"
-          type="text"
-          placeholder="Enter hero name"
-          autocomplete="off"
-        />
-      </div>
-      <div class="heroes-container scroll-container"></div>
-      <div class="reset">
-        <i class="fas fa-undo-alt"></i>
-        <div class="reset-buttons">
-          <i class="fas fa-check"></i>
-          <i class="fas fa-times"></i>
-        </div>
-      </div>
-      <div class="team-blue">
-        <div class="pick">
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-        </div>
-        <div class="ban">
-          <div class="ban-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="ban-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="ban-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="team-red">
-        <div class="pick">
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="pick-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-        </div>
-        <div class="ban">
-          <div class="ban-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="ban-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-          <div class="ban-item">
-            <img src="./assets/images/empty.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
+		<div class="items-container">
+			<div>
+				<ul class="items-categories">
+					<li><button class="categorie__active" value="All">All</button></li>
+					<li><button value="Attack">Attack</button></li>
+					<li><button value="Magic">Magic</button></li>
+					<li><button value="Defense">Defense</button></li>
+					<li><button value="Movement">Movement</button></li>
+				</ul>
+				<div class="items-search">
+					<input
+						id="search-item"
+						type="text"
+						placeholder="Enter item name"
+						autocomplete="off"
+					/>
+				</div>
+				<div class="items scroll-container"></div>
+			</div>
+			<div class="builds">
+				<div class="builds-container"></div>
+				<div class="add-build">
+					<button><i class="fas fa-plus"></i></button>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="roles">
+				<ul>
+					<li><button value="All" class="role__active">All</button></li>
+					<li><button value="Fighter">Fighter</button></li>
+					<li><button value="Mage">Mage</button></li>
+					<li><button value="Marksman">Marksman</button></li>
+					<li><button value="Assassin">Assassin</button></li>
+					<li><button value="Tank">Tank</button></li>
+					<li><button value="Support">Support</button></li>
+				</ul>
+			</div>
+			<div class="heroes-search">
+				<input
+					id="search-hero"
+					type="text"
+					placeholder="Enter hero name"
+					autocomplete="off"
+				/>
+			</div>
+			<div class="heroes-container scroll-container"></div>
+			<div class="reset">
+				<i class="fas fa-undo-alt"></i>
+				<div class="reset-buttons">
+					<i class="fas fa-check"></i>
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+			<div class="team-blue">
+				<div class="pick">
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+				</div>
+				<div class="ban">
+					<div class="ban-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="ban-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="ban-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="team-red">
+				<div class="pick">
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="pick-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+				</div>
+				<div class="ban">
+					<div class="ban-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="ban-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+					<div class="ban-item">
+						<img src="./assets/images/empty.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div class="map-container">
-      <canvas id="map-canvas"></canvas>
-      <div class="player-container player-blue-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/exp.webp" alt="" />
-      </div>
-      <div class="player-container player-blue-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/gold.webp" alt="" />
-      </div>
-      <div class="player-container player-blue-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/middle.webp" alt="" />
-      </div>
-      <div class="player-container player-blue-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/jungle.webp" alt="" />
-      </div>
-      <div class="player-container player-blue-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/roam.webp" alt="" />
-      </div>
+		<div class="map-container">
+			<canvas id="map-canvas"></canvas>
+			<div class="player-container player-blue-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/exp.webp" alt="" />
+			</div>
+			<div class="player-container player-blue-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/gold.webp" alt="" />
+			</div>
+			<div class="player-container player-blue-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/middle.webp" alt="" />
+			</div>
+			<div class="player-container player-blue-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/jungle.webp" alt="" />
+			</div>
+			<div class="player-container player-blue-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/roam.webp" alt="" />
+			</div>
 
-      <div class="player-container player-red-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/exp.webp" alt="" />
-      </div>
-      <div class="player-container player-red-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/gold.webp" alt="" />
-      </div>
-      <div class="player-container player-red-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/middle.webp" alt="" />
-      </div>
-      <div class="player-container player-red-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/jungle.webp" alt="" />
-      </div>
-      <div class="player-container player-red-team">
-        <img class="player" src="./assets/images/empty.png" alt="" />
-        <img src="./assets/images/Lines/roam.webp" alt="" />
-      </div>
+			<div class="player-container player-red-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/exp.webp" alt="" />
+			</div>
+			<div class="player-container player-red-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/gold.webp" alt="" />
+			</div>
+			<div class="player-container player-red-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/middle.webp" alt="" />
+			</div>
+			<div class="player-container player-red-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/jungle.webp" alt="" />
+			</div>
+			<div class="player-container player-red-team">
+				<img class="player" src="./assets/images/empty.png" alt="" />
+				<img src="./assets/images/Lines/roam.webp" alt="" />
+			</div>
 
-      <div class="map-settings-button">
-        <i class="fas fa-wrench"></i>
-      </div>
-      <div class="map-instruction-background">
-        <div class="map-instruction">
-          <i class="fas fa-times"></i>
-        </div>
-      </div>
-      <div class="map-settings scroll-container">
-        <i class="fas fa-times"></i>
-        <i class="fas fa-info"></i>
-        <div class="map-heroes">
-          <div class="map-heroes-item">
-            <div class="map-heroes-item-line">
-              <img src="./assets/images/Lines/exp.webp" alt="" />
-            </div>
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-          </div>
-          <div class="map-heroes-item">
-            <div class="map-heroes-item-line">
-              <img src="./assets/images/Lines/gold.webp" alt="" />
-            </div>
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-          </div>
-          <div class="map-heroes-item">
-            <div class="map-heroes-item-line">
-              <img src="./assets/images/Lines/middle.webp" alt="" />
-            </div>
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-          </div>
-          <div class="map-heroes-item">
-            <div class="map-heroes-item-line">
-              <img src="./assets/images/Lines/jungle.webp" alt="" />
-            </div>
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-          </div>
-          <div class="map-heroes-item">
-            <div class="map-heroes-item-line">
-              <img src="./assets/images/Lines/roam.webp" alt="" />
-            </div>
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-            <img
-              class="map-heroes-item-img"
-              src="./assets/images/empty.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="map-heroes-container scroll-container"></div>
-        <div class="map-arrows-settings">
-          <div>
-            <input type="checkbox" name="" id="arrows-mode" />
-            <label for="arrows-mode">Arrows mode</label>
-          </div>
-          <div class="arrows-settings-container">
-            <div>
-              <label for="arrow-body-width">Arrow body width: </label>
-              <input type="number" id="arrow-body-width" value="7" />
-            </div>
-            <div>
-              <label for="arrow-headlen-width">Arrow headlen width: </label>
-              <input type="number" id="arrow-headlen-width" value="10" />
-            </div>
-            <div class="change-arrows-color">
-              <div class="color red color__active"></div>
-              <div class="color green"></div>
-              <div class="color blue"></div>
-              <div class="color purple"></div>
-              <div class="color yellow"></div>
-            </div>
-          </div>
-        </div>
-        <div class="settings-buttons">
-          <button class="clear-arrows">Clear arrows</button>
-          <button class="reset-positions">Reset positions</button>
-          <button class="clear-heroes">Clear heroes</button>
-          <button class="clear-all">Clear all</button>
-        </div>
-      </div>
-    </div>
-    <div class="tier-list-container">
-      <div class="tier-list__categories">
-        <div class="tier-list__categorie">
-          <div class="tier-list__categorie-letter" data-color="#ff7f7f"><p>S</p></div>
-          <div class="tier-list__categorie-content"></div>
-          <div class="tier-list__categorie-content-settings">
-            <i class="fas fa-cog"></i>
-          </div>
-        </div>
-        <div class="tier-list__categorie">
-          <div class="tier-list__categorie-letter" data-color="#ffbf7f"><p>A</p></div>
-          <div class="tier-list__categorie-content"></div>
-          <div class="tier-list__categorie-content-settings">
-            <i class="fas fa-cog"></i>
-          </div>
-        </div>
-        <div class="tier-list__categorie">
-          <div class="tier-list__categorie-letter" data-color="#ffdf80"><p>B</p></div>
-          <div class="tier-list__categorie-content"></div>
-          <div class="tier-list__categorie-content-settings">
-            <i class="fas fa-cog"></i>
-          </div>
-        </div>
-        <div class="tier-list__categorie">
-          <div class="tier-list__categorie-letter" data-color="#ffff7f"><p>C</p></div>
-          <div class="tier-list__categorie-content"></div>
-          <div class="tier-list__categorie-content-settings">
-            <i class="fas fa-cog"></i>
-          </div>
-        </div>
-      </div>
-      <div class="tier-list__items-container">
-        <div class="tier-list__items-container-settings">
-          <div class="items-container-settings__categories">
-            <p class="items-container__categorie--active" data-id="0">Герои</p>
-            <p data-id="1">Предметы</p>
-            <p data-id="2">Заклинания</p>
-          </div>
-        </div>
-        <div class="items-container__items scroll-container">
+			<div class="map-settings-button">
+				<i class="fas fa-wrench"></i>
+			</div>
+			<div class="map-instruction-background">
+				<div class="map-instruction">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+			<div class="map-settings scroll-container">
+				<i class="fas fa-times"></i>
+				<i class="fas fa-info"></i>
+				<div class="map-heroes">
+					<div class="map-heroes-item">
+						<div class="map-heroes-item-line">
+							<img src="./assets/images/Lines/exp.webp" alt="" />
+						</div>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+					</div>
+					<div class="map-heroes-item">
+						<div class="map-heroes-item-line">
+							<img src="./assets/images/Lines/gold.webp" alt="" />
+						</div>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+					</div>
+					<div class="map-heroes-item">
+						<div class="map-heroes-item-line">
+							<img src="./assets/images/Lines/middle.webp" alt="" />
+						</div>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+					</div>
+					<div class="map-heroes-item">
+						<div class="map-heroes-item-line">
+							<img src="./assets/images/Lines/jungle.webp" alt="" />
+						</div>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+					</div>
+					<div class="map-heroes-item">
+						<div class="map-heroes-item-line">
+							<img src="./assets/images/Lines/roam.webp" alt="" />
+						</div>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+						<img
+							class="map-heroes-item-img"
+							src="./assets/images/empty.png"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="map-heroes-container scroll-container"></div>
+				<div class="map-arrows-settings">
+					<div>
+						<input type="checkbox" name="" id="arrows-mode" />
+						<label for="arrows-mode">Arrows mode</label>
+					</div>
+					<div class="arrows-settings-container">
+						<div>
+							<label for="arrow-body-width">Arrow body width: </label>
+							<input type="number" id="arrow-body-width" value="7" />
+						</div>
+						<div>
+							<label for="arrow-headlen-width">Arrow headlen width: </label>
+							<input type="number" id="arrow-headlen-width" value="10" />
+						</div>
+						<div class="change-arrows-color">
+							<div class="color red color__active"></div>
+							<div class="color green"></div>
+							<div class="color blue"></div>
+							<div class="color purple"></div>
+							<div class="color yellow"></div>
+						</div>
+					</div>
+				</div>
+				<div class="settings-buttons">
+					<button class="clear-arrows">Clear arrows</button>
+					<button class="reset-positions">Reset positions</button>
+					<button class="clear-heroes">Clear heroes</button>
+					<button class="clear-all">Clear all</button>
+				</div>
+			</div>
+		</div>
+		<div class="tier-list-container">
+			<div class="tier-list__categories">
+				<div class="tier-list__categorie">
+					<div class="tier-list__categorie-letter" data-color="#ff7f7f"><p>S</p></div>
+					<div class="tier-list__categorie-content"></div>
+					<div class="tier-list__categorie-content-settings">
+						<i class="fas fa-undo-alt"></i>
+					</div>
+				</div>
+				<div class="tier-list__categorie">
+					<div class="tier-list__categorie-letter" data-color="#ffbf7f"><p>A</p></div>
+					<div class="tier-list__categorie-content"></div>
+					<div class="tier-list__categorie-content-settings">
+						<i class="fas fa-undo-alt"></i>
+					</div>
+				</div>
+				<div class="tier-list__categorie">
+					<div class="tier-list__categorie-letter" data-color="#ffdf80"><p>B</p></div>
+					<div class="tier-list__categorie-content"></div>
+					<div class="tier-list__categorie-content-settings">
+						<i class="fas fa-undo-alt"></i>
+					</div>
+				</div>
+				<div class="tier-list__categorie">
+					<div class="tier-list__categorie-letter" data-color="#ffff7f"><p>C</p></div>
+					<div class="tier-list__categorie-content"></div>
+					<div class="tier-list__categorie-content-settings">
+						<i class="fas fa-undo-alt"></i>
+					</div>
+				</div>
+			</div>
+			<div class="tier-list__items-container">
+				<div class="tier-list__items-container-settings">
+					<div class="items-container-settings__categories">
+						<p class="items-container__categorie--active" data-id="0">Герои</p>
+						<p data-id="1">Предметы</p>
+						<p data-id="2">Заклинания</p>
+					</div>
+					<input type="search" class="tier-list__search-input" placeholder="Поиск">
+				</div>
+				<div class="items-container__items scroll-container">
 
-        </div>
-      </div>
-    </div>
-    <div class="add-note"><i class="fas fa-plus"></i></div>
-    <div class="change-note-visibility"><i class="fas fa-eye"></i></div>
-    <div class="notes"></div>
-    <div class="note-menu">
-      <p class="delete-note">Удалить заметку</p>
-      <p class="cancel-menu">Отмена</p>
-    </div>
-    <div class="language">
-      <ul>
-        <li class="language__active" data="0">ENG</li>
-        <li data="1">RUS</li>
-      </ul>
-    </div>
-    <div class="ranks">
-      <p class="rank rank__active" data="epic">Epic</p>
-      <p class="rank" data="legend">Legend</p>
-      <p class="rank" data="mythic">Mythic</p>
-    </div>
-    <div class="other-modes">
-      <i class="fas fa-gamepad"></i>
-      <i class="fas fa-hammer"></i>
-      <i class="fas fa-th-list"></i>
-    </div>
-    <script type="module" src="assets/js/storage.js"></script>
-    <script type="module" src="assets/js/preloader.js"></script>
-    <!-- Heroes -->
-    <script type="module" src="assets/js/heroes/heroes.js"></script>
-    <script type="module" src="assets/js/heroes/changeHero.js"></script>
-    <script type="module" src="assets/js/heroes/roles.js"></script>
-    <script src="assets/js/heroes/reset.js"></script>
-    <script src="assets/js/heroes/cancelHero.js"></script>
-    <script src="assets/js/heroes/searchHero.js"></script>
-    <!-- Builds -->
-    <script type="module" src="assets/js/builds/items.js"></script>
-    <script type="module" src="assets/js/builds/categories.js"></script>
-    <script type="module" src="assets/js/builds/changeItem.js"></script>
-    <script type="module" src="assets/js/builds/setHero.js"></script>
-    <script type="module" src="assets/js/builds/buildOptions.js"></script>
-    <script type="module" src="assets/js/builds/addBuild.js"></script>
-    <script type="module" src="assets/js/builds/buildSpells.js"></script>
-    <script type="module" src="assets/js/builds/baseEmblems.js"></script>
-    <script type="module" src="assets/js/builds/emblems.js"></script>
-    <script type="module" src="assets/js/builds/searchItem.js"></script>
-    <script type="module" src="assets/js/builds/buildStats.js"></script>
-    <!-- Map -->
-    <script type="module" src="assets/js/map/map.js"></script>
-    <script type="module" src="assets/js/map/playerMovement.js"></script>
-    <script type="module" src="assets/js/map/mapSettings.js"></script>
-    <script type="module" src="assets/js/map/changeHero.js"></script>
-    <script type="module" src="assets/js/map/drawArrows.js"></script>
-    <script type="module" src="assets/js/map/clearArrows.js"></script>
-    <script type="module" src="assets/js/map/resetHeroesPosition.js"></script>
-    <script type="module" src="assets/js/map/clearHeroes.js"></script>
-    <script type="module" src="assets/js/map/clearAll.js"></script>
-    <script type="module" src="assets/js/map/selection.js"></script>
-    <script type="module" src="assets/js/map/instruction.js"></script>
-    <!-- Notes -->
-    <script src="assets/js/notes/addNote.js"></script>
-    <script src="assets/js/notes/noteMenu.js"></script>
-    <script src="assets/js/notes/changeNotesVisibility.js"></script>
-    <!-- TIer List -->
-     <script src="assets/js/tierlist/openTierlist.js"></script>
-     <script type="module" src="assets/js/tierlist/items.js"></script>
-    <!-- Other -->
-    <script type="module" src="assets/js/ranks.js"></script>
-    <script type="module" src="assets/js/changeLanguage.js"></script>
-  </body>
+				</div>
+			</div>
+		</div>
+		<div class="add-note"><i class="fas fa-plus"></i></div>
+		<div class="change-note-visibility"><i class="fas fa-eye"></i></div>
+		<div class="notes"></div>
+		<div class="note-menu">
+			<p class="delete-note">Удалить заметку</p>
+			<p class="cancel-menu">Отмена</p>
+		</div>
+		<div class="language">
+			<ul>
+				<li class="language__active" data="0">ENG</li>
+				<li data="1">RUS</li>
+			</ul>
+		</div>
+		<div class="ranks">
+			<p class="rank rank__active" data="epic">Epic</p>
+			<p class="rank" data="legend">Legend</p>
+			<p class="rank" data="mythic">Mythic</p>
+		</div>
+		<div class="other-modes">
+			<i class="fas fa-gamepad"></i>
+			<i class="fas fa-hammer"></i>
+			<i class="fas fa-th-list"></i>
+		</div>
+		<script type="module" src="assets/js/storage.js"></script>
+		<script type="module" src="assets/js/preloader.js"></script>
+		<!-- Heroes -->
+		<script type="module" src="assets/js/heroes/heroes.js"></script>
+		<script type="module" src="assets/js/heroes/changeHero.js"></script>
+		<script type="module" src="assets/js/heroes/roles.js"></script>
+		<script src="assets/js/heroes/reset.js"></script>
+		<script src="assets/js/heroes/cancelHero.js"></script>
+		<script src="assets/js/heroes/searchHero.js"></script>
+		<!-- Builds -->
+		<script type="module" src="assets/js/builds/items.js"></script>
+		<script type="module" src="assets/js/builds/categories.js"></script>
+		<script type="module" src="assets/js/builds/changeItem.js"></script>
+		<script type="module" src="assets/js/builds/setHero.js"></script>
+		<script type="module" src="assets/js/builds/buildOptions.js"></script>
+		<script type="module" src="assets/js/builds/addBuild.js"></script>
+		<script type="module" src="assets/js/builds/buildSpells.js"></script>
+		<script type="module" src="assets/js/builds/baseEmblems.js"></script>
+		<script type="module" src="assets/js/builds/emblems.js"></script>
+		<script type="module" src="assets/js/builds/searchItem.js"></script>
+		<script type="module" src="assets/js/builds/buildStats.js"></script>
+		<!-- Map -->
+		<script type="module" src="assets/js/map/map.js"></script>
+		<script type="module" src="assets/js/map/playerMovement.js"></script>
+		<script type="module" src="assets/js/map/mapSettings.js"></script>
+		<script type="module" src="assets/js/map/changeHero.js"></script>
+		<script type="module" src="assets/js/map/drawArrows.js"></script>
+		<script type="module" src="assets/js/map/clearArrows.js"></script>
+		<script type="module" src="assets/js/map/resetHeroesPosition.js"></script>
+		<script type="module" src="assets/js/map/clearHeroes.js"></script>
+		<script type="module" src="assets/js/map/clearAll.js"></script>
+		<script type="module" src="assets/js/map/selection.js"></script>
+		<script type="module" src="assets/js/map/instruction.js"></script>
+		<!-- Notes -->
+		<script src="assets/js/notes/addNote.js"></script>
+		<script src="assets/js/notes/noteMenu.js"></script>
+		<script src="assets/js/notes/changeNotesVisibility.js"></script>
+		<!-- TIer List -->
+		 <script type="module" src="assets/js/tierlist/openTierlist.js"></script>
+		 <script type="module" src="assets/js/tierlist/items.js"></script>
+		 <script type="module" src="assets/js/tierlist/search.js"></script>
+		 <script type="module" src="assets/js/tierlist/dragAndDrop.js"></script>
+		 <script type="module" src="assets/js/tierlist/categories.js"></script>
+		 <script type="module" src="assets/js/tierlist/clearContainers.js"></script>
+		 <script type="module" src="assets/js/tierlist/addItem.js"></script>
+		 <script type="module" src="assets/js/tierlist/deleteItem.js"></script>
+		<!-- Other -->
+		<script type="module" src="assets/js/ranks.js"></script>
+		<script type="module" src="assets/js/changeLanguage.js"></script>
+	</body>
 </html>

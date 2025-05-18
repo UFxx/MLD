@@ -45,9 +45,7 @@ window.addEventListener("load", () => {
       i++;
     }
   }, 300);
-  setTimeout(() => {
-    preloader.style.opacity = 0;
-  }, 900);
+  setTimeout(() => preloader.style.opacity = 0, 900);
   setTimeout(() => {
     preloader.remove();
     otherModesButtons.style.zIndex = 2;

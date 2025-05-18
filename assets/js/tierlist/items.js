@@ -1,44 +1,37 @@
 import { Heroes, Items, Spells } from "../storage.js";
+import { dragAndDropItems } from "./dragAndDrop.js";
+import { deleteItem } from "./deleteItem.js";
 
-const AllItems = [Heroes, Items, Spells];
-const itemsContainer = document.querySelector('.items-container__items')
-const categories = document.querySelectorAll('.items-container-settings__categories p');
+export const AllItems = [Heroes, Items, Spells];
+export const itemsContainer = document.querySelector('.items-container__items')
 
-function appendItems (arr) {
-    arr.forEach(item => {
-        if (!Boolean(item.name[localStorage.getItem('language')])) {
-            return
-        }
+export function appendItems (arr) {
+	arr.forEach(item => {
+		if (!Boolean(item.name[localStorage.getItem('language')])) return
 
-        const itemContainer = document.createElement('div');
-        itemContainer.classList.add('items-container__item');
+		const itemContainer = document.createElement('div');
+		itemContainer.classList.add('items-container__item');
+		itemContainer.draggable = true;
+		itemContainer.addEventListener('click', () => deleteItem(itemContainer))
 
-        const itemImg = document.createElement('img');
-        itemImg.src = item.img;
-        itemImg.alt = item.name;
-        itemContainer.appendChild(itemImg)
+		const itemImg = document.createElemecd nt('img');
+		itemImg.src = item.img;
+		itemImg.alt = item.name;
+		itemContainer.appendChild(itemImg)
 
-        const itemName = document.createElement('p');
-        itemName.innerHTML = item.name[localStorage.getItem('language')];
-        itemContainer.appendChild(itemName);
+		const itemName = document.createElement('p');
+		itemName.innerHTML = item.name[localStorage.getItem('language')];
+		itemContainer.appendChild(itemName);
 
-        itemsContainer.appendChild(itemContainer)
-    })
+		itemsContainer.appendChild(itemContainer)
+	})
+
+	const items = document.querySelectorAll('.items-container__item');
+	dragAndDropItems(items);
 }
 
-appendItems(Heroes)
+appendItems(AllItems[getActiveCategoryId()])
 
-categories.forEach(c => {
-    c.addEventListener('click', () => {
-        categories.forEach(c => c.classList.remove('items-container__categorie--active'))
-
-        c.classList.add('items-container__categorie--active');
-        changeCategory(Number(c.dataset.id))
-    })
-})
-
-function changeCategory(categoryId) {
-    itemsContainer.innerHTML = '';
-
-    appendItems(AllItems[categoryId])
+export function getActiveCategoryId() {
+	return document.querySelector('.items-container__categorie--active').dataset.id;
 }

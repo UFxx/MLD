@@ -1805,7 +1805,7 @@ export const Spells = [
   { name: ['Revitalize', 'Исцеление'], img: './assets/images/Spells/Revitalize.webp' },
   { name: ['Aegis', 'Щит'], img: './assets/images/Spells/Aegis.webp' },
   { name: ['Petrify', 'Оцепенение'], img: './assets/images/Spells/Petrify.webp' },
-  { name: '', img: '' },
+  { name: ['', ''], img: '' },
   { name: ['Purify', 'Очищение'], img: './assets/images/Spells/Purify.webp' },
   { name: ['Flameshot', 'Огенный выстрел'], img: './assets/images/Spells/Flameshot.webp' },
   { name: ['Flicker', 'Вспышка'], img: './assets/images/Spells/Flicker.webp' },
