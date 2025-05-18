@@ -32,6 +32,8 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     window.scrollTo({
       top: 0,
+      left: 0,
+      behavior: "smooth"
     });
   });
   clearInterval(letterScale);
@@ -43,11 +45,10 @@ window.addEventListener("load", () => {
       i++;
     }
   }, 300);
-  setTimeout(() => {
-    preloader.style.opacity = 0;
-  }, 900);
+  setTimeout(() => preloader.style.opacity = 0, 900);
   setTimeout(() => {
     preloader.remove();
     otherModesButtons.style.zIndex = 2;
   }, 1000);
+
 });

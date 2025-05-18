@@ -14,11 +14,14 @@ builderButton.addEventListener('click', () => {
   } else {
     title.textContent = 'MLDrafter';
   }
-  otherModesButtons.removeChild(otherModesButtons.children[2]); // Remove map settings button
-  if (window.scrollY > 0) {
+  if (otherModesButtons.children[3]) {
+    otherModesButtons.removeChild(otherModesButtons.children[3]); // Remove map settings button
+  }
+  if (window.scrollY > 0 || window.scrollX > 0) {
     setTimeout(() => {
       window.scrollTo({
         top: 0,
+        left: 0,
         behavior: 'smooth'
       });
     }, 300);
