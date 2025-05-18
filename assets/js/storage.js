@@ -1964,7 +1964,7 @@ export const translation = {
   searches: [
     ['Enter hero name', 'Введите имя героя'],
     ['Enter item name', 'Введите название предмета'],
-    ['Enter item of hero name', 'Введите имя героя или название предмета']
+    ['Search', 'Поиск']
   ],
   mapSettings: {
     arrowsMode: [['Arrows mode', 'Режим стрелок']],
